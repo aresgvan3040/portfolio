@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vishnu Shaiju — Motion Graphics Designer, Video Editor & 3D Artist</title>
-  <meta name="description" content="Official Motion Graphics, Video Editing, 3D Animation & Reels Portfolio of Vishnu Shaiju (Kochi, Kerala). After Effects, Premiere Pro, Autodesk Maya, Alight Motion." />
+  <title>VISHNU SHAIJU | Motion Graphics &amp; Video Editing • Kochi, India</title>
+  <meta name="description" content="Official Motion Graphics, Video Editing, 3D Animation & Reels Portfolio of Vishnu Shaiju (Kochi, Kerala, India). Proficient in After Effects, Premiere Pro, Autodesk Maya, Photoshop & Audition." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,17 +15,16 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Space Grotesk', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace']
           },
           colors: {
-            obsidian: '#07090E',
-            panel: '#0F131D',
-            panelLight: '#151B28',
-            cyanGlow: '#00F0FF',
-            violetGlow: '#8B5CF6',
-            amberGlow: '#F59E0B'
+            obsidian: '#07090f',
+            panel: '#0d111c',
+            panelSoft: '#131929',
+            cyanAccent: '#00f0ff',
+            violetAccent: '#8b5cf6',
+            amberAccent: '#f59e0b'
           }
         }
       }
@@ -33,51 +32,52 @@
   </script>
   <style>
     body {
-      background-color: #07090E;
-      color: #F3F4F6;
+      background-color: #07090f;
+      color: #f3f4f6;
       overflow-x: hidden;
     }
-    .studio-grid {
+    .studio-grid-bg {
       background-image:
-        radial-gradient(circle at 15% 15%, rgba(0, 240, 255, 0.08), transparent 38%),
-        radial-gradient(circle at 85% 20%, rgba(139, 92, 246, 0.10), transparent 40%),
-        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 44px 44px, 44px 44px;
+        radial-gradient(circle at 12% 12%, rgba(0, 240, 255, 0.08), transparent 36%),
+        radial-gradient(circle at 88% 16%, rgba(139, 92, 246, 0.10), transparent 40%),
+        radial-gradient(circle at 50% 88%, rgba(245, 158, 11, 0.05), transparent 40%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
     }
-    .glass-card {
-      background: rgba(15, 19, 29, 0.78);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+    .glass-panel {
+      background: rgba(13, 17, 28, 0.84);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .glass-card-hover {
+    .card-lift {
       transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
-    .glass-card-hover:hover {
-      transform: translateY(-3px);
-      border-color: rgba(0, 240, 255, 0.35);
-      box-shadow: 0 18px 40px -15px rgba(0, 240, 255, 0.18);
+    .card-lift:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 240, 255, 0.40);
+      box-shadow: 0 22px 44px -16px rgba(0, 240, 255, 0.22);
     }
-    /* Owner vs Visitor Mode Visibility */
+
+    /* Owner Mode Visibility Gating (Strictly hidden from public visitors) */
     .owner-only { display: none !important; }
+    .owner-only-block { display: none !important; }
     body.owner-unlocked .owner-only { display: inline-flex !important; }
     body.owner-unlocked .owner-only-block { display: block !important; }
-    body.owner-unlocked .owner-only-grid { display: grid !important; }
     body.owner-unlocked .visitor-only { display: none !important; }
-    .owner-only-block, .owner-only-grid { display: none !important; }
 
     /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 8px; height: 8px; }
-    ::-webkit-scrollbar-track { background: #07090E; }
-    ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 9999px; }
+    ::-webkit-scrollbar-track { background: #07090f; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 9999px; }
     ::-webkit-scrollbar-thumb:hover { background: #334155; }
   </style>
 </head>
-<body class="studio-grid min-h-screen antialiased selection:bg-cyan-400 selection:text-slate-950">
+<body class="studio-grid-bg min-h-screen antialiased selection:bg-cyan-400 selection:text-slate-950">
 
   <!-- =====================================================================
-       BAKED PORTFOLIO DATA STORE (Safe JSON block for clean HTML exports)
+       BAKED PORTFOLIO DATA (Self-contained JSON updated automatically on Export)
   ====================================================================== -->
   <script id="portfolio-baked-data" type="application/json">
   {
@@ -92,261 +92,200 @@
         "id": "reel-showreel-2026",
         "title": "2026 Official Motion Graphics & Editing Showreel",
         "category": "Motion Graphics",
+        "aspectRatio": "16:9",
         "duration": "01:15",
-        "software": ["After Effects", "Premiere Pro"],
+        "resolution": "1080p 60fps",
+        "software": ["After Effects", "Premiere Pro", "Autodesk Maya"],
         "videoSrc": "https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/portfolio-videos/videos/1795327595878-Showreel.mp4",
-        "videoType": "DirectMP4",
-        "resolution": "1080p 60fps",
-        "aspectRatio": "16:9",
-        "description": "Flagship montage combining 2.5D camera rigs, dynamic typography, speed-ramped commercial cuts, and 3D composited shots.",
+        "description": "Flagship montage combining 2.5D camera rigs, dynamic typography, speed-ramped commercial cuts, and 3D modeling & animation shots.",
         "presetTheme": "cyan-violet"
       },
       {
-        "id": "reel-vertical-neon-product",
-        "title": "Profile Introduction — 9:16 Instagram Reel",
-        "category": "Reels & Shorts",
-        "duration": "00:28",
-        "software": ["After Effects", "Premiere Pro"],
-        "videoSrc": "https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/portfolio-videos/videos/1795242941946-CR7_Final_out.mp4",
-        "videoType": "DirectMP4",
-        "resolution": "1080×1920 • 9:16",
-        "aspectRatio": "9:16",
-        "description": "Vertical 9:16 motion graphics reel built for Instagram & YouTube Shorts with crisp keyframe velocity and beat-synced cuts.",
-        "presetTheme": "cyan-violet"
-      },
-      {
-        "id": "reel-kinetic-typo",
-        "title": "Kinetic Typography & Brand Launch Promo",
+        "id": "reel-zomato-promo",
+        "title": "Kinetic Typography & Brand Promo",
         "category": "Motion Graphics",
-        "duration": "00:42",
-        "software": ["After Effects", "Photoshop", "Audition"],
-        "videoSrc": "",
-        "videoType": "ProceduralReel",
-        "resolution": "1080p 60fps",
         "aspectRatio": "16:9",
-        "description": "High-energy typographic animation synced to custom percussive sound design with 3D glass sphere transitions.",
+        "duration": "00:42",
+        "resolution": "1080p 60fps",
+        "software": ["After Effects"],
+        "videoSrc": "https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/portfolio-videos/videos/zomato%20final.mp4",
+        "description": "High-energy kinetic typography and brand promo edit crafted in Adobe After Effects with rhythmic motion curves and crisp visual pacing.",
         "presetTheme": "magenta-cyan"
       },
       {
-        "id": "reel-commercial-grade",
-        "title": "Midnight Apex — Automotive Commercial & Color Grade",
-        "category": "Commercial & Color",
-        "duration": "00:55",
-        "software": ["Premiere Pro", "After Effects", "Audition"],
-        "videoSrc": "",
-        "videoType": "ProceduralReel",
-        "resolution": "4K UHD",
-        "aspectRatio": "16:9",
-        "description": "Teal-and-amber anamorphic color grading, optical glow compositing, speed ramps, and engine riser audio mastering.",
-        "presetTheme": "teal-amber"
-      },
-      {
-        "id": "reel-maya-3d",
-        "title": "Monolith & Gold — 3D Modeling & Animation Study",
-        "category": "3D Motion",
-        "duration": "00:38",
-        "software": ["Autodesk Maya", "After Effects", "Photoshop"],
-        "videoSrc": "",
-        "videoType": "ProceduralReel",
-        "resolution": "1080p 60fps",
-        "aspectRatio": "16:9",
-        "description": "3D architectural monoliths with animated camera sweeps, volumetric lighting passes, and multi-pass After Effects compositing.",
-        "presetTheme": "gold-obsidian"
+        "id": "reel-cr7-vertical",
+        "title": "CR7 — 9:16 Sports Motion Graphics Reel",
+        "category": "Reels & Shorts",
+        "aspectRatio": "9:16",
+        "duration": "00:28",
+        "resolution": "1080x1920 • 9:16",
+        "software": ["After Effects"],
+        "videoSrc": "https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/portfolio-videos/videos/CR7%20Final%20out.mp4",
+        "description": "Vertical 9:16 sports motion graphics reel built in After Effects with velocity keyframing, dynamic text overlays, and beat-synced transitions.",
+        "presetTheme": "amber-cyan"
       }
     ],
     "socialConfig": {
-      "eyebrow": "CONNECT & FOLLOW",
-      "heading": "Social Hub & Creative Channels",
-      "subtitle": "Watch daily short-form edits, behind-the-scenes node breakdowns, and client showreels across platforms.",
+      "eyebrow": "PORTFOLIO CHANNELS & NETWORK",
+      "heading": "Social & Creative Profiles",
+      "subtitle": "Explore full motion design breakdowns on Behance, vertical reels on Instagram, and professional updates on LinkedIn.",
       "links": [
         {
-          "id": "soc-ig",
-          "customHeading": "Instagram Reels & VFX",
-          "platform": "Instagram",
-          "groupHeading": "Video & Visual Portfolios",
-          "handle": "@shotby_vishnu",
-          "ctaText": "Follow on Instagram",
-          "url": "https://www.instagram.com/shotby_vishnu"
-        },
-        {
           "id": "soc-behance",
-          "customHeading": "Behance Case Studies",
+          "customHeading": "Behance Portfolio & Case Studies",
           "platform": "Behance",
-          "groupHeading": "Video & Visual Portfolios",
           "handle": "behance.net/vishnuvichu91",
-          "ctaText": "View Projects",
+          "ctaText": "View Behance Projects",
           "url": "https://www.behance.net/vishnuvichu91"
         },
         {
-          "id": "soc-telegram",
-          "customHeading": "Alight Motion & Raw Edits",
-          "platform": "Telegram",
-          "groupHeading": "Video & Visual Portfolios",
-          "handle": "@escaperealitymp4",
-          "ctaText": "Open Telegram Channel",
-          "url": "https://t.me/escaperealitymp4"
+          "id": "soc-instagram",
+          "customHeading": "Instagram Reels & Motion Edits",
+          "platform": "Instagram",
+          "handle": "@shotby_vishnu",
+          "ctaText": "Follow @shotby_vishnu",
+          "url": "https://www.instagram.com/shotby_vishnu"
         },
         {
           "id": "soc-linkedin",
-          "customHeading": "LinkedIn Studio Network",
+          "customHeading": "LinkedIn Professional Profile",
           "platform": "LinkedIn",
-          "groupHeading": "Hiring & Freelance",
-          "handle": "Vishnu Shaiju",
+          "handle": "linkedin.com/in/vishnu-shaiju-754815327",
           "ctaText": "Connect on LinkedIn",
-          "url": "https://www.linkedin.com"
-        },
-        {
-          "id": "soc-fiverr",
-          "customHeading": "Fiverr Direct Gigs",
-          "platform": "Fiverr",
-          "groupHeading": "Hiring & Freelance",
-          "handle": "Motion & Video Editing",
-          "ctaText": "Hire on Fiverr",
-          "url": "https://www.fiverr.com"
+          "url": "https://www.linkedin.com/in/vishnu-shaiju-754815327"
         }
       ]
     },
     "resumeConfig": {
-      "title": "Vishnu Shaiju — Video Editor & Motion Graphics Resume",
-      "fileName": "",
-      "fileSizeLabel": "",
-      "updatedAt": "",
-      "pdfUrl": ""
+      "title": "Vishnu Shaiju — Motion Graphics Designer & Video Editor Resume",
+      "fileName": "Vishnu Shaiju (1).pdf",
+      "pdfUrl": "https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/portfolio-videos/Pdf/Vishnu%20Shaiju%20(1).pdf",
+      "fileSizeLabel": "PDF Document",
+      "updatedAt": "Nov 2026"
     }
   }
   </script>
 
   <!-- =====================================================================
-       STICKY GLASSMORPHIC HEADER
+       STICKY GLASSMORPHISM HEADER
   ====================================================================== -->
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#07090E]/85 backdrop-blur-xl">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#07090f]/85 backdrop-blur-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
-      <!-- Brand Monogram -->
+      <!-- Brand Identity -->
       <a href="#top" class="flex items-center gap-3 group shrink-0">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-500 to-violet-600 p-[1.5px] shadow-lg shadow-cyan-500/20">
-          <div class="w-full h-full rounded-[10px] bg-[#07090E] flex items-center justify-center font-display font-bold text-sm tracking-wider text-white group-hover:text-cyan-300 transition-colors">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-400 via-blue-500 to-violet-600 p-[1.5px] shadow-lg shadow-cyan-500/20">
+          <div class="w-full h-full rounded-[14px] bg-[#07090f] flex items-center justify-center font-extrabold text-sm tracking-wider text-white group-hover:text-cyan-300 transition-colors">
             VS
           </div>
         </div>
-        <div class="hidden sm:block">
-          <div class="font-display font-bold text-sm text-white tracking-tight leading-none">Vishnu Shaiju</div>
-          <div class="font-mono text-[10px] text-cyan-400 tracking-widest uppercase mt-1">Motion • Edit • 3D</div>
+        <div>
+          <div class="font-extrabold text-sm sm:text-base text-white tracking-tight leading-none">VISHNU SHAIJU</div>
+          <div class="font-mono text-[10px] text-cyan-400 tracking-wider mt-1">Motion Graphics &amp; Video Editing • Kochi, India</div>
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-6 text-xs font-medium text-gray-300">
-        <a href="#videos" class="hover:text-cyan-300 transition-colors">Videos &amp; Reels</a>
-        <a href="#alight-motion" class="hover:text-cyan-300 transition-colors">Alight Motion</a>
-        <a href="#social-hub" class="hover:text-cyan-300 transition-colors">Social Hub</a>
-        <a href="#pipeline" class="hover:text-cyan-300 transition-colors">3D &amp; Pipeline</a>
-        <a href="#resume" class="hover:text-cyan-300 transition-colors">Resume PDF</a>
+      <!-- Clean Public Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold text-gray-300">
+        <a href="#work" class="hover:text-cyan-300 transition-colors">Showreel &amp; Work</a>
+        <a href="#reels" class="hover:text-cyan-300 transition-colors">Vertical Reels</a>
+        <a href="#resume" class="hover:text-cyan-300 transition-colors">Resume / CV</a>
         <a href="#contact" class="hover:text-cyan-300 transition-colors">Contact</a>
       </nav>
 
-      <!-- Mode & Cloud Controls -->
+      <!-- Right Action / Owner Mode Controls -->
       <div class="flex items-center gap-2 shrink-0">
-        <!-- Cloud Sync Status Pill -->
-        <button type="button" onclick="openCloudSetupModal()" id="cloud-status-pill"
-          class="px-2.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center gap-2 text-[11px] font-mono text-gray-300 transition-colors"
+        <!-- Owner-Only Cloud Status Pill -->
+        <button type="button" onclick="openCloudSetupModal()"
+          class="owner-only px-2.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 items-center gap-2 text-[11px] font-mono text-gray-300 transition-colors"
           title="Configure Cloudflare Worker & Supabase Cloud Sync">
-          <span id="cloud-status-dot" class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+          <span id="cloud-status-dot" class="w-2 h-2 rounded-full bg-amber-400"></span>
           <span id="cloud-status-text">Cloud Setup</span>
         </button>
 
-        <!-- Visitor Mode Unlock Button -->
-        <button type="button" onclick="openOwnerLoginModal()"
-          class="visitor-only px-3 py-1.5 rounded-xl bg-white/5 hover:bg-cyan-500/15 text-gray-200 hover:text-cyan-300 border border-white/10 hover:border-cyan-500/40 text-xs font-medium transition-all flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-          </svg>
-          <span>Owner Login</span>
-        </button>
-
-        <!-- Owner Mode Active Controls -->
+        <!-- Owner-Only Add Video -->
         <button type="button" onclick="openVideoModal()"
-          class="owner-only px-3 py-1.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-semibold text-xs shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all items-center gap-1">
+          class="owner-only px-3 py-1.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all items-center gap-1">
           <span>+ Add Video</span>
         </button>
 
+        <!-- Owner-Only Export HTML -->
         <button type="button" onclick="exportStandaloneHTML()"
-          class="owner-only px-3 py-1.5 rounded-xl bg-violet-500/20 hover:bg-violet-500/30 text-violet-200 border border-violet-500/40 font-mono text-xs transition-colors items-center gap-1.5"
-          title="Download clean index.html with current videos baked in">
+          class="owner-only px-3 py-1.5 rounded-xl bg-violet-500/20 hover:bg-violet-500/30 text-violet-200 border border-violet-500/40 font-mono text-xs transition-colors items-center gap-1"
+          title="Download standalone index.html with all videos, PDF & config baked in">
           <span>Export HTML</span>
         </button>
 
+        <!-- Owner-Only Lock -->
         <button type="button" onclick="lockOwnerMode()"
-          class="owner-only px-2.5 py-1.5 rounded-xl bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30 text-xs font-medium transition-colors items-center gap-1"
-          title="Lock Owner Mode">
+          class="owner-only px-2.5 py-1.5 rounded-xl bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30 text-xs font-semibold transition-colors items-center">
           <span>Lock</span>
         </button>
+
+        <!-- Visitor CTA -->
+        <a href="#contact"
+          class="visitor-only px-4 py-2 rounded-xl bg-cyan-400/15 hover:bg-cyan-400/25 text-cyan-300 border border-cyan-400/35 text-xs font-bold transition-all">
+          Book an Edit
+        </a>
       </div>
     </div>
   </header>
 
   <!-- =====================================================================
-       HERO SECTION
+       HERO SECTION (2026 Showreel + Software Stack + Direct Inquiry CTA)
   ====================================================================== -->
   <section id="top" class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-      <!-- Left Copy -->
+      <!-- Left Editorial Column -->
       <div class="lg:col-span-7 space-y-6">
         <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-mono text-[11px] tracking-wider uppercase">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>Available for Freelance &amp; Full-Time Roles • Kochi</span>
+          <span>Available for Freelance &amp; Studio Projects • Kochi, Kerala</span>
         </div>
 
-        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-[1.08]">
-          Crafting High-Impact
+        <h1 class="font-extrabold text-4xl sm:text-5xl lg:text-[56px] tracking-tight text-white leading-[1.08]">
+          Cinematic Motion Graphics &amp;
           <span class="bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">
-            Motion Graphics
+            High-Retention Video Edits
           </span>
-          &amp; Visual Stories.
         </h1>
 
         <p class="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl">
-          I'm <strong class="text-white font-semibold">Vishnu Shaiju</strong> — a Motion Graphics Designer, Video Editor &amp; 3D Visual Artist based in Kochi, Kerala. Editing since <strong class="text-cyan-300">2021</strong> with <strong class="text-cyan-300">2+ years of freelance experience</strong> delivering kinetic typography, commercial cuts, 3D animations, and high-retention social reels.
+          I'm <strong class="text-white font-bold">Vishnu Shaiju</strong>, a Motion Graphics Designer &amp; Video Editor based in <strong class="text-cyan-300">Kochi, Kerala, India</strong>. I craft kinetic typography brand promos, 3D animated sequences, and high-impact 9:16 sports &amp; social reels.
         </p>
 
-        <!-- Primary CTAs -->
-        <div class="flex flex-wrap items-center gap-3.5 pt-1">
-          <button type="button" onclick="playFeaturedShowreel()"
-            class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-semibold text-sm shadow-xl shadow-cyan-500/25 hover:brightness-110 transition-all flex items-center gap-2.5">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-            <span>Play 2026 Showreel</span>
-          </button>
-
-          <a href="#videos"
-            class="px-6 py-3.5 rounded-2xl bg-white/5 hover:bg-white/10 text-white border border-white/15 font-semibold text-sm transition-all">
-            Explore All Reels
-          </a>
-
-          <a href="#contact"
-            class="px-5 py-3.5 rounded-2xl bg-violet-500/15 hover:bg-violet-500/25 text-violet-200 border border-violet-500/30 font-semibold text-sm transition-all">
-            Book a Project
-          </a>
+        <!-- Software Stack Badges -->
+        <div class="flex flex-wrap items-center gap-2 pt-0.5">
+          <span class="px-3 py-1.5 rounded-xl bg-violet-500/15 border border-violet-500/30 text-violet-200 font-mono text-xs font-semibold">After Effects</span>
+          <span class="px-3 py-1.5 rounded-xl bg-blue-500/15 border border-blue-500/30 text-blue-200 font-mono text-xs font-semibold">Premiere Pro</span>
+          <span class="px-3 py-1.5 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-200 font-mono text-xs font-semibold">Autodesk Maya</span>
+          <span class="px-3 py-1.5 rounded-xl bg-sky-500/15 border border-sky-500/30 text-sky-200 font-mono text-xs font-semibold">Photoshop</span>
+          <span class="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-200 font-mono text-xs font-semibold">Audition</span>
         </div>
 
-        <!-- Stats Strip -->
-        <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-4 max-w-xl">
-          <div class="glass-card rounded-2xl p-3.5 sm:p-4">
-            <div class="font-display font-bold text-xl sm:text-2xl text-white">2021</div>
-            <div class="font-mono text-[11px] text-gray-400 mt-0.5">Editing Journey</div>
-          </div>
-          <div class="glass-card rounded-2xl p-3.5 sm:p-4">
-            <div class="font-display font-bold text-xl sm:text-2xl text-cyan-300">2+ Yrs</div>
-            <div class="font-mono text-[11px] text-gray-400 mt-0.5">Freelance Experience</div>
-          </div>
-          <div class="glass-card rounded-2xl p-3.5 sm:p-4">
-            <div class="font-display font-bold text-lg sm:text-xl text-violet-300">AE • Pr • 3D</div>
-            <div class="font-mono text-[11px] text-gray-400 mt-0.5">Maya &amp; Alight Motion</div>
-          </div>
+        <!-- Primary & Direct Inquiry CTAs -->
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <button type="button" onclick="playFeaturedShowreel()"
+            class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold text-sm shadow-xl shadow-cyan-500/25 hover:brightness-110 transition-all flex items-center gap-2.5">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+            <span>Watch 2026 Showreel</span>
+          </button>
+
+          <a href="https://wa.me/917736882453?text=Hi%20Vishnu!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20video%20project."
+            target="_blank" rel="noopener noreferrer"
+            class="px-5 py-3.5 rounded-2xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-200 border border-emerald-500/35 font-bold text-sm transition-all flex items-center gap-2">
+            <span>WhatsApp Inquiry</span>
+          </a>
+
+          <a href="mailto:vishnuvichu3040@gmail.com?subject=Video%20Editing%20%2F%20Motion%20Graphics%20Inquiry"
+            class="px-5 py-3.5 rounded-2xl bg-white/5 hover:bg-white/10 text-white border border-white/15 font-bold text-sm transition-all">
+            Email Me
+          </a>
         </div>
       </div>
 
-      <!-- Right Featured Showreel Card -->
+      <!-- Right Featured 2026 Showreel Card -->
       <div class="lg:col-span-5">
-        <div class="glass-card rounded-3xl p-4 sm:p-5 border border-cyan-500/25 shadow-2xl shadow-cyan-500/10 relative overflow-hidden">
+        <div class="glass-panel rounded-3xl p-4 sm:p-5 border border-cyan-500/25 shadow-2xl shadow-cyan-500/10">
           <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
@@ -359,37 +298,35 @@
             </span>
           </div>
 
-          <!-- Interactive Poster Preview -->
           <div onclick="playFeaturedShowreel()" class="group relative aspect-video rounded-2xl overflow-hidden bg-slate-950 border border-white/10 cursor-pointer">
             <canvas id="hero-poster-canvas" class="w-full h-full block"></canvas>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#07090E]/90 via-transparent to-transparent flex flex-col justify-between p-4">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#07090f]/95 via-black/20 to-transparent flex flex-col justify-between p-4">
               <div class="flex justify-between items-center">
-                <span class="px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[10px] font-mono text-cyan-300 border border-white/10">
-                  FEATURED REEL
+                <span class="px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-[10px] font-mono text-cyan-300 border border-white/10">
+                  FEATURED SHOWREEL
                 </span>
-                <span class="px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[10px] font-mono text-white border border-white/10">
+                <span class="px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-[10px] font-mono text-white border border-white/10">
                   01:15
                 </span>
               </div>
 
-              <!-- Center Play Button -->
-              <div class="self-center w-16 h-16 rounded-full bg-cyan-400/95 text-slate-950 flex items-center justify-center shadow-2xl shadow-cyan-400/50 group-hover:scale-110 transition-transform">
+              <div class="self-center w-16 h-16 rounded-full bg-cyan-400 text-slate-950 flex items-center justify-center shadow-2xl shadow-cyan-400/50 group-hover:scale-110 transition-transform">
                 <svg class="w-7 h-7 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
               </div>
 
               <div>
-                <div class="font-display font-bold text-base sm:text-lg text-white leading-snug">
-                  2026 Motion Graphics &amp; Editing Showreel
+                <div class="font-bold text-base sm:text-lg text-white leading-snug">
+                  2026 Official Motion Graphics &amp; Editing Showreel
                 </div>
-                <div class="text-xs text-gray-300 mt-0.5">After Effects • Premiere Pro • 3D Compositing</div>
+                <div class="text-xs text-gray-300 mt-0.5">After Effects • Premiere Pro • Autodesk Maya</div>
               </div>
             </div>
           </div>
 
-          <div class="mt-4 flex items-center justify-between text-xs text-gray-400 font-mono">
-            <span>Direct Worker Stream Ready</span>
-            <button type="button" onclick="playFeaturedShowreel()" class="text-cyan-300 hover:underline font-semibold">
-              Watch Fullscreen →
+          <div class="mt-3.5 flex items-center justify-between text-xs text-gray-400 font-mono">
+            <span>16:9 Widescreen Master</span>
+            <button type="button" onclick="playFeaturedShowreel()" class="text-cyan-300 hover:underline font-bold">
+              Play Fullscreen →
             </button>
           </div>
         </div>
@@ -398,181 +335,76 @@
   </section>
 
   <!-- =====================================================================
-       VIDEOS & REELS SHOWCASE
+       SECTION 1: 16:9 WIDESCREEN SHOWREELS & COMMERCIAL WORK
   ====================================================================== -->
-  <section id="videos" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
+  <section id="work" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
       <div>
-        <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">PORTFOLIO SHOWCASE</div>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Videos &amp; Vertical Reels</h2>
+        <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">16:9 WIDESCREEN PORTFOLIO</div>
+        <h2 class="font-extrabold text-3xl sm:text-4xl text-white">Showreel &amp; Commercial Work</h2>
         <p class="text-sm text-gray-400 mt-2 max-w-2xl">
-          Filter across 16:9 widescreen showreels, 9:16 Instagram/Shorts vertical edits, commercial color grades, and 3D motion studies.
+          Widescreen motion graphics, kinetic typography brand promos, and 3D composited edits. Click any project card to stream in full HD.
         </p>
       </div>
 
       <div class="flex flex-wrap items-center gap-2">
-        <button type="button" onclick="openVideoModal()"
-          class="owner-only px-4 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-semibold text-xs shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all items-center gap-1.5">
-          <span>+ Upload / Add Video</span>
+        <button type="button" onclick="openVideoModal('16:9')"
+          class="owner-only px-4 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all items-center gap-1.5">
+          <span>+ Add 16:9 Video</span>
         </button>
-        <button type="button" onclick="syncCloudStateNow()"
+        <button type="button" onclick="syncCloudStateNow(true)"
           class="owner-only px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/15 font-mono text-xs transition-colors items-center gap-1.5">
           <span>↻ Sync Cloud</span>
         </button>
       </div>
     </div>
 
-    <!-- Category Filter Pills -->
-    <div id="category-pills" class="flex flex-wrap items-center gap-2 mb-8"></div>
+    <!-- Category Filter Pills for 16:9 Projects -->
+    <div id="widescreen-category-pills" class="flex flex-wrap items-center gap-2 mb-8"></div>
 
-    <!-- Video Cards Grid -->
-    <div id="video-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <!-- 16:9 Widescreen Grid -->
+    <div id="video-grid-16x9" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
   </section>
 
   <!-- =====================================================================
-       ALIGHT MOTION SPOTLIGHT
+       SECTION 2: DEDICATED 9:16 VERTICAL REELS & SHORTS
   ====================================================================== -->
-  <section id="alight-motion" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="glass-card rounded-3xl p-6 sm:p-8 lg:p-10 border border-violet-500/30 bg-gradient-to-r from-violet-950/35 via-[#0F131D] to-cyan-950/30 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-      <div class="space-y-2.5 max-w-2xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/15 border border-violet-500/30 text-violet-300 font-mono text-[11px]">
-          MOBILE VFX &amp; VELOCITY ARCHIVE
-        </div>
-        <h3 class="font-display font-bold text-2xl sm:text-3xl text-white">
-          Alight Motion Edits &amp; Experimental Reels
-        </h3>
-        <p class="text-sm text-gray-300 leading-relaxed">
-          Explore custom graph curves, shake presets, velocity transitions, and mobile compositing experiments published directly on my Telegram channel <span class="font-mono text-cyan-300">@escaperealitymp4</span>.
-        </p>
-      </div>
-
-      <a href="https://t.me/escaperealitymp4" target="_blank" rel="noopener noreferrer"
-        class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-violet-500 to-cyan-500 text-white font-semibold text-sm shadow-lg shadow-violet-500/25 hover:brightness-110 transition-all shrink-0 flex items-center gap-2">
-        <span>Open @escaperealitymp4</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       CUSTOMIZABLE SOCIAL HUB
-  ====================================================================== -->
-  <section id="social-hub" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
+  <section id="reels" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
       <div>
-        <div id="social-eyebrow" class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">CONNECT &amp; FOLLOW</div>
-        <h2 id="social-heading" class="font-display font-bold text-3xl sm:text-4xl text-white">Social Hub &amp; Creative Channels</h2>
-        <p id="social-subtitle" class="text-sm text-gray-400 mt-2 max-w-2xl">
-          Watch daily short-form edits, behind-the-scenes node breakdowns, and client showreels across platforms.
+        <div class="font-mono text-xs text-violet-400 tracking-widest uppercase mb-2">9:16 VERTICAL FORMAT</div>
+        <h2 class="font-extrabold text-3xl sm:text-4xl text-white">Vertical Reels &amp; Shorts</h2>
+        <p class="text-sm text-gray-400 mt-2 max-w-2xl">
+          Native 1080×1920 vertical edits engineered for Instagram Reels &amp; YouTube Shorts with punchy velocity curves and beat-synced transitions.
         </p>
       </div>
 
-      <button type="button" onclick="openSocialModal()"
-        class="owner-only px-4 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-semibold text-xs shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all items-center gap-1.5 shrink-0">
-        <span>+ Add Social Card</span>
+      <button type="button" onclick="openVideoModal('9:16')"
+        class="owner-only px-4 py-2.5 rounded-xl bg-violet-500 text-white font-bold text-xs shadow-lg shadow-violet-500/25 hover:brightness-110 transition-all items-center gap-1.5 shrink-0">
+        <span>+ Add 9:16 Reel</span>
       </button>
     </div>
 
-    <div id="social-links-container" class="space-y-8"></div>
+    <!-- 9:16 Vertical Grid -->
+    <div id="video-grid-9x16" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"></div>
   </section>
 
   <!-- =====================================================================
-       SOFTWARE & 3D PIPELINE
-  ====================================================================== -->
-  <section id="pipeline" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
-    <div class="mb-10">
-      <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">PRODUCTION ARSENAL</div>
-      <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Software &amp; 3D Pipeline</h2>
-      <p class="text-sm text-gray-400 mt-2 max-w-2xl">
-        End-to-end post-production stack covering 2D/2.5D motion design, 3D scene modeling, editorial storytelling, and sound design.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="glass-card rounded-2xl p-6 space-y-2.5">
-        <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded-lg bg-violet-500/20 text-violet-300 font-mono text-xs font-bold">Ae</span>
-          <span class="font-mono text-[11px] text-gray-400">MOTION &amp; VFX</span>
-        </div>
-        <h3 class="font-display font-bold text-lg text-white">Adobe After Effects</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Keyframe graph mastery, kinetic typography, 3D camera tracking, rotoscoping, optical compositing, and expression rigs.
-        </p>
-      </div>
-
-      <div class="glass-card rounded-2xl p-6 space-y-2.5">
-        <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded-lg bg-blue-500/20 text-blue-300 font-mono text-xs font-bold">Pr</span>
-          <span class="font-mono text-[11px] text-gray-400">EDITORIAL &amp; COLOR</span>
-        </div>
-        <h3 class="font-display font-bold text-lg text-white">Adobe Premiere Pro</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Narrative pacing, speed-ramping, Lumetri color grading, multi-cam commercial cuts, and high-retention short-form pacing.
-        </p>
-      </div>
-
-      <div class="glass-card rounded-2xl p-6 space-y-2.5">
-        <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 font-mono text-xs font-bold">3D</span>
-          <span class="font-mono text-[11px] text-gray-400">MODELING &amp; ANIMATION</span>
-        </div>
-        <h3 class="font-display font-bold text-lg text-white">Autodesk Maya</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Hard-surface 3D modeling, camera layout, lighting passes, and multi-layer EXR rendering for After Effects integration.
-        </p>
-      </div>
-
-      <div class="glass-card rounded-2xl p-6 space-y-2.5">
-        <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded-lg bg-sky-500/20 text-sky-300 font-mono text-xs font-bold">Ps</span>
-          <span class="font-mono text-[11px] text-gray-400">STYLEFRAMES &amp; MATTE</span>
-        </div>
-        <h3 class="font-display font-bold text-lg text-white">Adobe Photoshop</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Layered asset preparation, clean plate painting, custom textures, and high-CTR thumbnail &amp; poster art direction.
-        </p>
-      </div>
-
-      <div class="glass-card rounded-2xl p-6 space-y-2.5">
-        <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 font-mono text-xs font-bold">Au</span>
-          <span class="font-mono text-[11px] text-gray-400">SFX &amp; MASTERING</span>
-        </div>
-        <h3 class="font-display font-bold text-lg text-white">Adobe Audition</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Whooshes, risers, foley layering, dialogue cleanup, and broadcast-ready loudness normalization.
-        </p>
-      </div>
-
-      <div class="glass-card rounded-2xl p-6 space-y-2.5">
-        <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 font-mono text-xs font-bold">AM</span>
-          <span class="font-mono text-[11px] text-gray-400">MOBILE MOTION</span>
-        </div>
-        <h3 class="font-display font-bold text-lg text-white">Alight Motion</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Rapid mobile keyframe prototyping, velocity edits, custom easing curves, and social-first visual experiments.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       RESUME / CV (PDF) SECTION
+       SECTION 3: RESUME / CV WITH INLINE MODAL & DOWNLOAD
   ====================================================================== -->
   <section id="resume" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
     <div class="mb-8">
       <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">CURRICULUM VITAE</div>
-      <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Resume &amp; Credits</h2>
+      <h2 class="font-extrabold text-3xl sm:text-4xl text-white">Resume / CV</h2>
+      <p class="text-sm text-gray-400 mt-2 max-w-2xl">
+        Preview my full production experience, software proficiency, and project credits directly in your browser or download a PDF copy.
+      </p>
     </div>
 
-    <!-- Public Resume Display Card -->
-    <div id="resume-display-card" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10"></div>
+    <div id="resume-display-card" class="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10"></div>
 
-    <!-- Owner Resume Upload & Link Controls -->
-    <div class="owner-only-block mt-5 glass-card rounded-2xl p-5 border border-cyan-500/30 space-y-4">
+    <!-- Owner-Only Resume PDF Controls -->
+    <div class="owner-only-block mt-5 glass-panel rounded-2xl p-5 border border-cyan-500/30 space-y-4">
       <div class="font-mono text-xs text-cyan-300 uppercase tracking-wider">Owner Resume Controls (Syncs to Cloud)</div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
@@ -582,18 +414,18 @@
             placeholder="Vishnu Shaiju — Resume" />
         </div>
         <div>
-          <label class="block text-xs text-gray-400 mb-1">Upload PDF to Cloud Bucket (&lt; 25 MB)</label>
+          <label class="block text-xs text-gray-400 mb-1">Upload New PDF to Cloud (&lt; 25 MB)</label>
           <input id="resume-file-input" type="file" accept="application/pdf,.pdf" onchange="handleResumePdfUpload(event)"
-            class="w-full text-xs text-gray-300 file:mr-3 file:py-2 file:px-3.5 file:rounded-xl file:border-0 file:bg-cyan-400 file:text-slate-950 file:font-semibold hover:file:brightness-110 cursor-pointer" />
+            class="w-full text-xs text-gray-300 file:mr-3 file:py-2 file:px-3.5 file:rounded-xl file:border-0 file:bg-cyan-400 file:text-slate-950 file:font-bold hover:file:brightness-110 cursor-pointer" />
         </div>
         <div>
-          <label class="block text-xs text-gray-400 mb-1">Or Direct PDF URL</label>
+          <label class="block text-xs text-gray-400 mb-1">Direct PDF URL (Auto-converts to Worker)</label>
           <div class="flex gap-2">
             <input id="resume-url-input" type="url"
-              class="w-full px-3.5 py-2 rounded-xl bg-black/50 border border-white/15 text-sm text-white focus:outline-none focus:border-cyan-400"
+              class="w-full px-3.5 py-2 rounded-xl bg-black/50 border border-white/15 font-mono text-xs text-cyan-300 focus:outline-none focus:border-cyan-400"
               placeholder="https://..." />
             <button type="button" onclick="saveResumeDirectUrl()"
-              class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-semibold text-white shrink-0">
+              class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-bold text-white shrink-0">
               Save
             </button>
           </div>
@@ -603,77 +435,97 @@
   </section>
 
   <!-- =====================================================================
-       DIRECT CONTACT & BOOKING
+       SECTION 4: SOCIAL PROFILES & DIRECT CONTACT
   ====================================================================== -->
-  <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
-    <div class="grid lg:grid-cols-12 gap-8 items-start">
+  <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10 space-y-16">
+    <!-- Social Profiles Row -->
+    <div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <div id="social-eyebrow" class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">PORTFOLIO CHANNELS &amp; NETWORK</div>
+          <h2 id="social-heading" class="font-extrabold text-3xl sm:text-4xl text-white">Social &amp; Creative Profiles</h2>
+          <p id="social-subtitle" class="text-sm text-gray-400 mt-2 max-w-2xl">
+            Explore full motion design breakdowns on Behance, vertical reels on Instagram, and professional updates on LinkedIn.
+          </p>
+        </div>
+        <button type="button" onclick="openSocialModal()"
+          class="owner-only px-4 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all items-center gap-1.5 shrink-0">
+          <span>+ Add Social Profile</span>
+        </button>
+      </div>
+
+      <div id="social-links-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </div>
+
+    <!-- Direct Project Inquiry & Brief Composer -->
+    <div class="grid lg:grid-cols-12 gap-8 items-start pt-4 border-t border-white/10">
       <div class="lg:col-span-5 space-y-5">
-        <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase">START A PROJECT</div>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Let's Cut Your Next Viral Reel or Commercial.</h2>
+        <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase">DIRECT INQUIRY</div>
+        <h3 class="font-extrabold text-2xl sm:text-3xl text-white">Start a Video or Motion Design Project</h3>
         <p class="text-sm text-gray-400 leading-relaxed">
-          Available for freelance motion graphics packages, YouTube/Instagram retention editing, 3D product promos, and full-time studio roles in Kochi or remote worldwide.
+          Available for freelance motion graphics packages, commercial video editing, 9:16 social reels, 3D animations, and full-time studio opportunities in Kochi or remote.
         </p>
 
-        <div class="space-y-3 pt-2">
-          <div class="glass-card rounded-2xl p-4 flex items-center justify-between gap-3">
-            <div>
-              <div class="font-mono text-[11px] text-gray-400">DIRECT EMAIL</div>
-              <div class="text-sm font-semibold text-white">vishnuvichu3040@gmail.com</div>
+        <div class="space-y-3 pt-1">
+          <div class="glass-panel rounded-2xl p-4 flex items-center justify-between gap-3">
+            <div class="min-w-0">
+              <div class="font-mono text-[11px] text-gray-400">EMAIL ADDRESS</div>
+              <div class="text-sm font-bold text-white truncate">vishnuvichu3040@gmail.com</div>
             </div>
             <button type="button" onclick="copyToClipboard('vishnuvichu3040@gmail.com', 'Copied email address!')"
-              class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-mono text-cyan-300 transition-colors">
+              class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-mono text-cyan-300 shrink-0 transition-colors">
               Copy
             </button>
           </div>
 
-          <div class="glass-card rounded-2xl p-4 flex items-center justify-between gap-3">
+          <div class="glass-panel rounded-2xl p-4 flex items-center justify-between gap-3">
             <div>
               <div class="font-mono text-[11px] text-gray-400">WHATSAPP / PHONE</div>
-              <div class="text-sm font-semibold text-white">+91 7736882453</div>
+              <div class="text-sm font-bold text-white">+91 77368 82453</div>
             </div>
             <a href="https://wa.me/917736882453" target="_blank" rel="noopener noreferrer"
-              class="px-3 py-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/30 text-xs font-mono text-emerald-300 transition-colors">
-              Chat →
+              class="px-3.5 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/30 text-xs font-mono text-emerald-300 shrink-0 transition-colors">
+              WhatsApp →
             </a>
           </div>
         </div>
       </div>
 
-      <form onsubmit="submitProjectBrief(event)" class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 space-y-4">
+      <form onsubmit="submitProjectBrief(event)" class="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-8 space-y-4">
         <div class="grid sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-medium text-gray-300 mb-1.5">Your Name / Brand</label>
+            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Your Name / Brand</label>
             <input id="brief-name" type="text" required
               class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/15 text-sm text-white focus:outline-none focus:border-cyan-400"
-              placeholder="Alex / Studio Name" />
+              placeholder="Name or Studio" />
           </div>
           <div>
-            <label class="block text-xs font-medium text-gray-300 mb-1.5">Project Type</label>
+            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Service Required</label>
             <select id="brief-service"
-              class="w-full px-4 py-3 rounded-xl bg-[#0B0F17] border border-white/15 text-sm text-white focus:outline-none focus:border-cyan-400">
+              class="w-full px-4 py-3 rounded-xl bg-[#0b0f17] border border-white/15 text-sm text-white focus:outline-none focus:border-cyan-400">
               <option>Motion Graphics &amp; Kinetic Typography</option>
-              <option>Instagram Reels / YouTube Shorts Package</option>
+              <option>9:16 Instagram Reels / YouTube Shorts</option>
               <option>Commercial Edit &amp; Color Grading</option>
-              <option>3D Animation / Product Visualization</option>
-              <option>Full-Time / Retainer Role</option>
+              <option>3D Modeling &amp; Animation (Maya)</option>
+              <option>Full-Time / Studio Role</option>
             </select>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-medium text-gray-300 mb-1.5">Project Details, References &amp; Timeline</label>
+          <label class="block text-xs font-semibold text-gray-300 mb-1.5">Project Brief, Format &amp; Timeline</label>
           <textarea id="brief-details" rows="4" required
             class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/15 text-sm text-white focus:outline-none focus:border-cyan-400"
-            placeholder="Share video length, aspect ratio (16:9 or 9:16), target deadline, or reference links..."></textarea>
+            placeholder="Describe your video concept, aspect ratio (16:9 or 9:16), duration, and target delivery date..."></textarea>
         </div>
 
         <div class="flex flex-wrap items-center gap-3 pt-1">
           <button type="submit"
-            class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-semibold text-sm shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all">
-            Send via Email
+            class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold text-sm shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all">
+            Send Brief via Email
           </button>
           <button type="button" onclick="sendBriefWhatsApp()"
-            class="px-5 py-3 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/35 font-semibold text-sm transition-all">
+            class="px-5 py-3 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/35 font-bold text-sm transition-all">
             Send via WhatsApp
           </button>
         </div>
@@ -682,120 +534,154 @@
   </section>
 
   <!-- =====================================================================
-       FOOTER
+       FOOTER (Includes Subtle "Studio Access" Owner Trigger)
   ====================================================================== -->
   <footer class="border-t border-white/10 py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 font-mono">
-    <div>© 2026 Vishnu Shaiju • Kochi, Kerala, India</div>
-    <div class="flex items-center gap-4">
+    <div>© 2026 VISHNU SHAIJU • Kochi, Kerala, India</div>
+    <div class="flex items-center gap-5">
       <a href="#top" class="hover:text-cyan-300 transition-colors">Back to Top ↑</a>
+      <button type="button" onclick="openOwnerLoginModal()" class="visitor-only text-gray-600 hover:text-cyan-400 transition-colors" title="Owner Studio Access">
+        Studio Access
+      </button>
     </div>
   </footer>
 
   <!-- =====================================================================
-       FULLSCREEN VIDEO PLAYER MODAL (Supports Direct MP4 + Procedural Canvas)
+       ADAPTIVE 16:9 / 9:16 FULLSCREEN VIDEO PLAYER MODAL
   ====================================================================== -->
-  <div id="video-player-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6">
-    <div class="w-full max-w-5xl glass-card rounded-3xl overflow-hidden border border-white/15 shadow-2xl flex flex-col max-h-[94vh]">
-      <!-- Modal Header -->
-      <div class="px-5 py-4 border-b border-white/10 flex items-center justify-between gap-4">
+  <div id="video-player-modal" class="fixed inset-0 z-50 hidden bg-black/92 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6">
+    <div id="player-modal-dialog" class="w-full max-w-4xl glass-panel rounded-3xl overflow-hidden border border-white/15 shadow-2xl flex flex-col max-h-[94vh] mx-auto">
+      <!-- Top Bar -->
+      <div class="px-4 sm:px-5 py-3.5 border-b border-white/10 flex items-center justify-between gap-3">
         <div class="min-w-0">
           <div class="flex items-center gap-2">
             <span id="player-badge" class="px-2 py-0.5 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-mono text-[10px]">16:9</span>
             <span id="player-software" class="font-mono text-[11px] text-gray-400 truncate">After Effects</span>
           </div>
-          <h3 id="player-title" class="font-display font-bold text-base sm:text-lg text-white truncate mt-1">Video Title</h3>
+          <h3 id="player-title" class="font-bold text-sm sm:text-lg text-white truncate mt-1">Video Title</h3>
         </div>
         <button type="button" onclick="closeVideoPlayer()"
-          class="w-10 h-10 rounded-xl bg-white/10 hover:bg-rose-500/25 text-white hover:text-rose-200 flex items-center justify-center shrink-0 transition-colors"
-          aria-label="Close player">
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/10 hover:bg-rose-500/25 text-white hover:text-rose-200 flex items-center justify-center shrink-0 transition-colors"
+          aria-label="Close video player">
           ✕
         </button>
       </div>
 
-      <!-- Stage -->
-      <div class="relative bg-black flex items-center justify-center overflow-hidden min-h-[260px] sm:min-h-[420px] max-h-[70vh]">
-        <!-- Direct MP4 Player -->
-        <video id="modal-html5-video" class="hidden max-h-[70vh] w-auto max-w-full object-contain" controls playsinline preload="metadata"></video>
+      <!-- Adaptive Media Container (Switches between aspect-video and aspect-[9/16]) -->
+      <div id="player-media-wrapper" class="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
+        <video id="modal-html5-video" class="w-full h-full object-contain bg-black" controls playsinline preload="metadata"></video>
 
-        <!-- Procedural Motion Graphics Canvas Player -->
-        <canvas id="modal-procedural-canvas" class="hidden w-full h-[360px] sm:h-[460px] block"></canvas>
-
-        <!-- Stream Error Fallback Overlay -->
-        <div id="player-error-box" class="hidden absolute inset-0 bg-[#07090E]/95 p-6 flex flex-col items-center justify-center text-center space-y-3">
+        <!-- Stream Fallback Overlay -->
+        <div id="player-error-box" class="hidden absolute inset-0 bg-[#07090f]/95 p-6 flex flex-col items-center justify-center text-center space-y-3">
           <div class="w-12 h-12 rounded-2xl bg-rose-500/20 border border-rose-500/40 text-rose-300 flex items-center justify-center font-bold">!</div>
-          <div class="font-display font-bold text-lg text-white">Video Stream Interrupted</div>
-          <p id="player-error-msg" class="text-xs text-gray-400 max-w-md">
-            Unable to load the MP4 stream. Check your network connection or open the direct Worker stream link below.
+          <div class="font-bold text-base sm:text-lg text-white">Direct Stream Available</div>
+          <p class="text-xs text-gray-400 max-w-sm">
+            If inline playback is restricted in an embedded preview, open the Cloudflare Worker stream directly in a browser tab.
           </p>
           <a id="player-direct-link" href="#" target="_blank" rel="noopener noreferrer"
-            class="px-4 py-2 rounded-xl bg-cyan-400 text-slate-950 font-semibold text-xs">
-            Open Direct Stream in New Tab
+            class="px-4 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20">
+            Open Direct Stream in New Tab ↗
           </a>
         </div>
       </div>
 
       <!-- Footer Description -->
-      <div class="px-5 py-3.5 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-black/40">
-        <p id="player-desc" class="text-xs text-gray-300"></p>
+      <div class="px-4 sm:px-5 py-3 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-black/40">
+        <p id="player-desc" class="text-xs text-gray-300 line-clamp-2"></p>
         <span id="player-duration" class="font-mono text-xs text-cyan-300 shrink-0">00:00</span>
       </div>
     </div>
   </div>
 
   <!-- =====================================================================
-       OWNER LOGIN & PIN MODAL
+       FULLSCREEN PDF RESUME VIEWER MODAL (With Mobile Open-in-New-Tab Fallback)
+  ====================================================================== -->
+  <div id="pdf-viewer-modal" class="fixed inset-0 z-50 hidden bg-black/92 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6">
+    <div class="w-full max-w-4xl glass-panel rounded-3xl overflow-hidden border border-white/15 flex flex-col h-[90vh]">
+      <div class="px-4 sm:px-5 py-3.5 border-b border-white/10 flex items-center justify-between gap-3">
+        <div class="min-w-0">
+          <div class="font-mono text-[10px] text-cyan-400 uppercase">RESUME / CV PREVIEW</div>
+          <h3 id="pdf-modal-title" class="font-bold text-sm sm:text-base text-white truncate">Vishnu Shaiju — Resume</h3>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a id="pdf-modal-newtab" href="#" target="_blank" rel="noopener noreferrer"
+            class="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-semibold text-cyan-300">
+            Open in New Tab ↗
+          </a>
+          <button type="button" onclick="downloadResumePdf()"
+            class="px-3.5 py-2 rounded-xl bg-cyan-400 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20">
+            Download PDF
+          </button>
+          <button type="button" onclick="closePdfViewerModal()"
+            class="w-9 h-9 rounded-xl bg-white/10 hover:bg-rose-500/25 text-white flex items-center justify-center">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Hint Banner -->
+      <div class="px-4 py-2 bg-cyan-500/10 border-b border-cyan-500/20 flex items-center justify-between gap-2 text-[11px] text-cyan-200">
+        <span>On mobile browsers that don't display inline PDFs, tap <strong>Open in New Tab ↗</strong> above.</span>
+      </div>
+
+      <iframe id="pdf-viewer-iframe" class="w-full flex-1 bg-slate-900" src="" title="Vishnu Shaiju Resume PDF"></iframe>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       OWNER STUDIO LOGIN MODAL (Hidden from Public Visitors)
   ====================================================================== -->
   <div id="owner-login-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="w-full max-w-md glass-card rounded-3xl p-6 sm:p-7 border border-white/15 space-y-5">
+    <div class="w-full max-w-md glass-panel rounded-3xl p-6 sm:p-7 border border-white/15 space-y-5">
       <div class="flex items-center justify-between">
-        <h3 class="font-display font-bold text-xl text-white">Owner Studio Access</h3>
+        <h3 class="font-extrabold text-xl text-white">Owner Studio Access</h3>
         <button type="button" onclick="closeOwnerLoginModal()" class="text-gray-400 hover:text-white text-lg">✕</button>
       </div>
       <p class="text-xs text-gray-400 leading-relaxed">
-        Enter your Studio PIN (default: <code class="text-cyan-300 font-mono">3040</code>) to upload videos, edit social cards, upload your PDF resume, and sync changes across devices.
+        Enter Studio PIN to unlock video uploads, 16:9 &amp; 9:16 management, PDF resume updates, and Cloudflare/Supabase cloud sync.
       </p>
       <form onsubmit="submitOwnerPin(event)" class="space-y-4">
         <input id="owner-pin-input" type="password" inputmode="numeric" required
           class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-center font-mono text-lg tracking-[0.4em] text-white focus:outline-none focus:border-cyan-400"
           placeholder="••••" />
         <button type="submit"
-          class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-semibold text-sm shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all">
-          Unlock Studio Mode
+          class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold text-sm shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all">
+          Unlock Owner Mode
         </button>
       </form>
     </div>
   </div>
 
   <!-- =====================================================================
-       CLOUD SYNC SETUP MODAL (Cloudflare Worker + Supabase)
+       CLOUD SYNC SETUP MODAL
   ====================================================================== -->
   <div id="cloud-setup-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="w-full max-w-lg glass-card rounded-3xl p-6 sm:p-7 border border-white/15 space-y-5 max-h-[92vh] overflow-y-auto">
+    <div class="w-full max-w-lg glass-panel rounded-3xl p-6 sm:p-7 border border-white/15 space-y-5 max-h-[92vh] overflow-y-auto">
       <div class="flex items-center justify-between">
         <div>
-          <h3 class="font-display font-bold text-xl text-white">Cloud Sync Configuration</h3>
-          <p class="text-xs text-gray-400 mt-0.5">Routes traffic through your Cloudflare Worker for mobile &amp; desktop sync.</p>
+          <h3 class="font-extrabold text-xl text-white">Cloud Sync Configuration</h3>
+          <p class="text-xs text-gray-400 mt-0.5">Connects to Supabase <code class="text-cyan-300">portfolio_state</code> through your Cloudflare Worker.</p>
         </div>
         <button type="button" onclick="closeCloudSetupModal()" class="text-gray-400 hover:text-white text-lg">✕</button>
       </div>
 
       <form onsubmit="saveCloudConfigForm(event)" class="space-y-4">
         <div>
-          <label class="block text-xs font-medium text-gray-300 mb-1">Cloudflare Worker URL (No trailing slash)</label>
+          <label class="block text-xs font-semibold text-gray-300 mb-1">Cloudflare Worker URL (No trailing slash)</label>
           <input id="cfg-supabase-url" type="url" required
             class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 font-mono text-xs text-cyan-300 focus:outline-none focus:border-cyan-400"
             placeholder="https://fragrant-sky-2a7c.aresgvan3040.workers.dev" />
         </div>
 
         <div>
-          <label class="block text-xs font-medium text-gray-300 mb-1">Supabase Publishable / Anon Key</label>
+          <label class="block text-xs font-semibold text-gray-300 mb-1">Supabase Publishable / Anon Key</label>
           <input id="cfg-supabase-key" type="text" required
             class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 font-mono text-xs text-white focus:outline-none focus:border-cyan-400"
             placeholder="sb_publishable_... or eyJhbGci..." />
         </div>
 
         <div>
-          <label class="block text-xs font-medium text-gray-300 mb-1">Storage Bucket Name</label>
+          <label class="block text-xs font-semibold text-gray-300 mb-1">Storage Bucket Name</label>
           <input id="cfg-supabase-bucket" type="text" required
             class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 font-mono text-xs text-white focus:outline-none focus:border-cyan-400"
             placeholder="portfolio-videos" />
@@ -803,15 +689,15 @@
 
         <div class="flex flex-wrap items-center gap-2.5 pt-2">
           <button type="submit"
-            class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-semibold text-xs shadow-lg shadow-cyan-500/20">
+            class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20">
             Save &amp; Connect Cloud
           </button>
           <button type="button" onclick="pushStateToCloud(true)"
-            class="px-4 py-2.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/35 text-emerald-200 font-semibold text-xs">
+            class="px-4 py-2.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/35 text-emerald-200 font-bold text-xs">
             Push Local → Cloud
           </button>
-          <button type="button" onclick="syncCloudStateNow()"
-            class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs">
+          <button type="button" onclick="syncCloudStateNow(true)"
+            class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs">
             Pull Cloud → Device
           </button>
         </div>
@@ -820,12 +706,12 @@
   </div>
 
   <!-- =====================================================================
-       ADD / EDIT VIDEO MODAL (Mobile & Desktop Upload Ready)
+       ADD / EDIT VIDEO MODAL
   ====================================================================== -->
   <div id="video-edit-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="w-full max-w-xl glass-card rounded-3xl p-6 sm:p-7 border border-white/15 space-y-5 max-h-[92vh] overflow-y-auto">
+    <div class="w-full max-w-xl glass-panel rounded-3xl p-6 sm:p-7 border border-white/15 space-y-5 max-h-[92vh] overflow-y-auto">
       <div class="flex items-center justify-between">
-        <h3 id="video-modal-heading" class="font-display font-bold text-xl text-white">Add Video / Reel</h3>
+        <h3 id="video-modal-heading" class="font-extrabold text-xl text-white">Add Video / Reel</h3>
         <button type="button" onclick="closeVideoModal()" class="text-gray-400 hover:text-white text-lg">✕</button>
       </div>
 
@@ -833,55 +719,54 @@
         <input id="vid-edit-id" type="hidden" />
 
         <div>
-          <label class="block text-xs font-medium text-gray-300 mb-1">Video Title *</label>
+          <label class="block text-xs font-semibold text-gray-300 mb-1">Video Title *</label>
           <input id="vid-title" type="text" required
             class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 text-sm text-white focus:outline-none focus:border-cyan-400"
-            placeholder="e.g., Cyber Rider — 9:16 Speed-Ramp Reel" />
+            placeholder="e.g., Kinetic Typography & Brand Promo" />
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div>
-            <label class="block text-xs font-medium text-gray-300 mb-1">Category</label>
+            <label class="block text-xs font-semibold text-gray-300 mb-1">Category</label>
             <select id="vid-category"
-              class="w-full px-3 py-2.5 rounded-xl bg-[#0B0F17] border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400">
+              class="w-full px-3 py-2.5 rounded-xl bg-[#0b0f17] border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400">
               <option>Motion Graphics</option>
-              <option>Reels &amp; Shorts</option>
               <option>Commercial &amp; Color</option>
               <option>3D Motion</option>
+              <option>Reels &amp; Shorts</option>
             </select>
           </div>
 
           <div>
-            <label class="block text-xs font-medium text-gray-300 mb-1">Aspect Ratio</label>
+            <label class="block text-xs font-semibold text-gray-300 mb-1">Aspect Ratio</label>
             <select id="vid-aspect"
-              class="w-full px-3 py-2.5 rounded-xl bg-[#0B0F17] border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400">
+              class="w-full px-3 py-2.5 rounded-xl bg-[#0b0f17] border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400">
               <option value="16:9">16:9 Widescreen</option>
               <option value="9:16">9:16 Vertical Reel</option>
             </select>
           </div>
 
           <div>
-            <label class="block text-xs font-medium text-gray-300 mb-1">Duration</label>
+            <label class="block text-xs font-semibold text-gray-300 mb-1">Duration</label>
             <input id="vid-duration" type="text"
-              class="w-full px-3 py-2.5 rounded-xl bg-black/60 border border-white/15 font-mono text-xs text-white focus:outline-none focus:border-cyan-400"
-              placeholder="00:45" value="00:45" />
+              class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 font-mono text-xs text-white focus:outline-none focus:border-cyan-400"
+              placeholder="00:42" value="00:42" />
           </div>
         </div>
 
         <!-- Direct Cloud Upload Box -->
         <div class="rounded-2xl p-4 bg-cyan-500/5 border border-cyan-500/25 space-y-2.5">
           <div class="flex items-center justify-between">
-            <label class="text-xs font-semibold text-cyan-300">Upload MP4 to Cloud (&lt; 50 MB)</label>
-            <span class="font-mono text-[10px] text-gray-400">H.264 MP4 Recommended</span>
+            <label class="text-xs font-bold text-cyan-300">Upload MP4 to Cloud (&lt; 50 MB)</label>
+            <span class="font-mono text-[10px] text-gray-400">H.264 8-bit MP4</span>
           </div>
           <input id="vid-file-input" type="file" accept="video/mp4,video/quicktime,video/webm,.mp4,.mov"
             onchange="handleVideoFileUpload(event)"
-            class="w-full text-xs text-gray-300 file:mr-3 file:py-2 file:px-3.5 file:rounded-xl file:border-0 file:bg-cyan-400 file:text-slate-950 file:font-semibold hover:file:brightness-110 cursor-pointer" />
+            class="w-full text-xs text-gray-300 file:mr-3 file:py-2 file:px-3.5 file:rounded-xl file:border-0 file:bg-cyan-400 file:text-slate-950 file:font-bold hover:file:brightness-110 cursor-pointer" />
 
-          <!-- Upload Progress Bar -->
           <div id="vid-upload-progress-wrap" class="hidden space-y-1 pt-1">
             <div class="flex justify-between font-mono text-[11px] text-cyan-300">
-              <span id="vid-upload-status">Uploading to Cloudflare Worker...</span>
+              <span id="vid-upload-status">Uploading via Cloudflare Worker...</span>
               <span id="vid-upload-pct">0%</span>
             </div>
             <div class="w-full h-2 rounded-full bg-black/60 overflow-hidden">
@@ -891,46 +776,45 @@
         </div>
 
         <div>
-          <label class="block text-xs font-medium text-gray-300 mb-1">Direct MP4 Video URL (Auto-filled after upload, or paste link)</label>
-          <input id="vid-url" type="url"
+          <label class="block text-xs font-semibold text-gray-300 mb-1">Direct MP4 Video URL (Auto-converts supabase.co → Worker)</label>
+          <input id="vid-url" type="url" required
             class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 font-mono text-xs text-cyan-300 focus:outline-none focus:border-cyan-400"
             placeholder="https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/..." />
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label class="block text-xs font-medium text-gray-300 mb-1">Software Used (comma-separated)</label>
+            <label class="block text-xs font-semibold text-gray-300 mb-1">Software Used (comma-separated)</label>
             <input id="vid-software" type="text"
               class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400"
-              placeholder="After Effects, Premiere Pro" value="After Effects, Premiere Pro" />
+              placeholder="After Effects, Premiere Pro" value="After Effects" />
           </div>
           <div>
-            <label class="block text-xs font-medium text-gray-300 mb-1">Thumbnail Theme</label>
+            <label class="block text-xs font-semibold text-gray-300 mb-1">Poster Accent Theme</label>
             <select id="vid-theme"
-              class="w-full px-3 py-2.5 rounded-xl bg-[#0B0F17] border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400">
+              class="w-full px-3 py-2.5 rounded-xl bg-[#0b0f17] border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400">
               <option value="cyan-violet">Cyan &amp; Violet Glow</option>
-              <option value="teal-amber">Teal &amp; Amber Grade</option>
               <option value="magenta-cyan">Magenta &amp; Electric Blue</option>
-              <option value="gold-obsidian">Gold &amp; Obsidian 3D</option>
+              <option value="amber-cyan">Amber &amp; Cyan Pulse</option>
             </select>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-medium text-gray-300 mb-1">Project Description</label>
+          <label class="block text-xs font-semibold text-gray-300 mb-1">Project Description</label>
           <textarea id="vid-desc" rows="2"
             class="w-full px-3.5 py-2 rounded-xl bg-black/60 border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400"
-            placeholder="Brief breakdown of keyframes, color grade, or 3D workflow..."></textarea>
+            placeholder="Brief breakdown of keyframes, transitions, or 3D workflow..."></textarea>
         </div>
 
         <div class="flex justify-end gap-2.5 pt-2">
           <button type="button" onclick="closeVideoModal()"
-            class="px-4 py-2.5 rounded-xl bg-white/10 text-xs font-semibold text-gray-300">
+            class="px-4 py-2.5 rounded-xl bg-white/10 text-xs font-bold text-gray-300">
             Cancel
           </button>
           <button type="submit" id="vid-save-btn"
-            class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-semibold text-xs shadow-lg shadow-cyan-500/20">
-            Save &amp; Sync to Cloud
+            class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20">
+            Save &amp; Sync
           </button>
         </div>
       </form>
@@ -938,41 +822,35 @@
   </div>
 
   <!-- =====================================================================
-       ADD / EDIT SOCIAL CARD MODAL
+       ADD / EDIT SOCIAL PROFILE MODAL
   ====================================================================== -->
   <div id="social-edit-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="w-full max-w-md glass-card rounded-3xl p-6 border border-white/15 space-y-4">
+    <div class="w-full max-w-md glass-panel rounded-3xl p-6 border border-white/15 space-y-4">
       <div class="flex items-center justify-between">
-        <h3 id="social-modal-heading" class="font-display font-bold text-lg text-white">Add Social Card</h3>
+        <h3 id="social-modal-heading" class="font-extrabold text-lg text-white">Add Social Profile</h3>
         <button type="button" onclick="closeSocialModal()" class="text-gray-400 hover:text-white">✕</button>
       </div>
       <form onsubmit="saveSocialForm(event)" class="space-y-3.5">
         <input id="soc-edit-id" type="hidden" />
         <div>
-          <label class="block text-xs text-gray-300 mb-1">Card Heading *</label>
+          <label class="block text-xs text-gray-300 mb-1">Card Title *</label>
           <input id="soc-heading" type="text" required
             class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 text-sm text-white"
-            placeholder="e.g., Instagram Reels" />
+            placeholder="e.g., Behance Portfolio & Case Studies" />
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <label class="block text-xs text-gray-300 mb-1">Platform</label>
+            <label class="block text-xs text-gray-300 mb-1">Platform *</label>
             <input id="soc-platform" type="text" required
               class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 text-xs text-white"
-              placeholder="Instagram" />
+              placeholder="Behance" />
           </div>
           <div>
-            <label class="block text-xs text-gray-300 mb-1">Group</label>
-            <input id="soc-group" type="text"
+            <label class="block text-xs text-gray-300 mb-1">Handle / Label</label>
+            <input id="soc-handle" type="text"
               class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 text-xs text-white"
-              value="Video & Visual Portfolios" />
+              placeholder="@shotby_vishnu" />
           </div>
-        </div>
-        <div>
-          <label class="block text-xs text-gray-300 mb-1">Handle / Subtitle</label>
-          <input id="soc-handle" type="text"
-            class="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 text-xs text-white"
-            placeholder="@shotby_vishnu" />
         </div>
         <div>
           <label class="block text-xs text-gray-300 mb-1">Profile URL *</label>
@@ -982,50 +860,33 @@
         </div>
         <div class="flex justify-end gap-2 pt-2">
           <button type="button" onclick="closeSocialModal()" class="px-4 py-2 rounded-xl bg-white/10 text-xs">Cancel</button>
-          <button type="submit" class="px-5 py-2 rounded-xl bg-cyan-400 text-slate-950 font-semibold text-xs">Save Card</button>
+          <button type="submit" class="px-5 py-2 rounded-xl bg-cyan-400 text-slate-950 font-bold text-xs">Save Profile</button>
         </div>
       </form>
     </div>
   </div>
 
   <!-- =====================================================================
-       PDF VIEWER MODAL
-  ====================================================================== -->
-  <div id="pdf-viewer-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6">
-    <div class="w-full max-w-4xl glass-card rounded-3xl overflow-hidden border border-white/15 flex flex-col h-[88vh]">
-      <div class="px-5 py-3.5 border-b border-white/10 flex items-center justify-between">
-        <h3 id="pdf-modal-title" class="font-display font-bold text-base text-white truncate">Resume Preview</h3>
-        <div class="flex items-center gap-2">
-          <button type="button" onclick="downloadResumePdf()" class="px-3 py-1.5 rounded-xl bg-cyan-400 text-slate-950 font-semibold text-xs">Download</button>
-          <button type="button" onclick="closePdfViewerModal()" class="w-9 h-9 rounded-xl bg-white/10 text-white">✕</button>
-        </div>
-      </div>
-      <iframe id="pdf-viewer-iframe" class="w-full flex-1 bg-slate-900" src=""></iframe>
-    </div>
-  </div>
-
-  <!-- =====================================================================
-       TOAST NOTIFICATION
+       TOAST NOTIFICATION CONTAINER
   ====================================================================== -->
   <div id="toast-container" class="fixed bottom-5 right-5 z-50 pointer-events-none flex flex-col gap-2 max-w-sm"></div>
 
   <!-- =====================================================================
-       APPLICATION LOGIC (Direct REST Sync + Cloudflare Worker URL Rewriter)
+       APPLICATION ENGINE (Cloudflare Worker URL Rewriter + Cloud REST Sync)
   ====================================================================== -->
   <script>
-    const RAW_SUPABASE_ORIGIN = "https://ufuidaeqrhrcyfudokwb.supabase.co";
-    const DEFAULT_WORKER_URL = "https://fragrant-sky-2a7c.aresgvan3040.workers.dev";
-    const LOCAL_STORAGE_KEY = "vishnu_studio_portfolio_v3";
-    const OWNER_SESSION_KEY = "vishnu_studio_owner_unlocked_v3";
-    // SHA-256 hash of default PIN "3040"
+    const WORKER_URL = "https://fragrant-sky-2a7c.aresgvan3040.workers.dev";
+    const SUPABASE_ORIGIN = "https://ufuidaeqrhrcyfudokwb.supabase.co";
+    const LOCAL_STORAGE_KEY = "vishnu_shaiju_portfolio_state_v5";
+    const OWNER_SESSION_KEY = "vishnu_shaiju_owner_session_v5";
     const DEFAULT_PIN_HASH = "f8b8736a760b90888272855492e2e0566037846910326311f06150a02c5e3c1b";
 
     function readBakedData() {
       try {
         const el = document.getElementById("portfolio-baked-data");
         return el ? JSON.parse(el.textContent) : {};
-      } catch (e) {
-        console.error("Failed to parse baked portfolio JSON:", e);
+      } catch (err) {
+        console.error("Failed to parse baked JSON:", err);
         return {};
       }
     }
@@ -1035,84 +896,74 @@
     let appState = {
       ownerPinHash: BAKED_DATA.ownerPinHash || DEFAULT_PIN_HASH,
       supabase: Object.assign({
-        url: DEFAULT_WORKER_URL,
+        url: WORKER_URL,
         anonKey: "",
         bucket: "portfolio-videos"
       }, BAKED_DATA.supabase || {}),
       videos: Array.isArray(BAKED_DATA.videos) ? BAKED_DATA.videos : [],
       socialConfig: BAKED_DATA.socialConfig || { links: [] },
       resumeConfig: BAKED_DATA.resumeConfig || {},
-      activeCategory: "All",
+      active16Category: "All",
       isOwnerUnlocked: false
     };
 
-    let activeProceduralAnimId = null;
-    let heroAnimId = null;
-
     // -------------------------------------------------------------------
-    // URL SANITIZER: Always strips trailing slash & rewrites supabase.co
-    // to the Cloudflare Worker URL so mobile carriers never block streams
+    // CLOUDFLARE WORKER URL REWRITER (Bypasses Indian ISP DNS blocks)
     // -------------------------------------------------------------------
     function getWorkerBaseUrl() {
-      let base = (appState.supabase && appState.supabase.url) ? appState.supabase.url.trim() : DEFAULT_WORKER_URL;
-      base = base.replace(/\/+$/, "");
-      if (!base) base = DEFAULT_WORKER_URL;
-      return base;
+      const raw = (appState.supabase && appState.supabase.url) ? appState.supabase.url.trim() : WORKER_URL;
+      return raw.replace(/\/+$/, "") || WORKER_URL;
     }
 
-    function normalizeCloudUrl(rawUrl) {
-      if (!rawUrl || typeof rawUrl !== "string") return "";
-      const workerBase = getWorkerBaseUrl();
-      return rawUrl.trim().replace(RAW_SUPABASE_ORIGIN, workerBase);
+    function toWorkerUrl(url) {
+      if (!url || typeof url !== "string") return "";
+      const base = getWorkerBaseUrl();
+      return url.trim().replace(/^https:\/\/ufuidaeqrhrcyfudokwb\.supabase\.co/i, base);
     }
 
-    function normalizeVideoList(list) {
+    function normalizeVideos(list) {
       if (!Array.isArray(list)) return [];
       return list.map(v => {
         const copy = Object.assign({}, v);
-        if (copy.videoSrc) {
-          copy.videoSrc = normalizeCloudUrl(copy.videoSrc);
-        }
+        if (copy.videoSrc) copy.videoSrc = toWorkerUrl(copy.videoSrc);
         return copy;
       });
     }
 
     // -------------------------------------------------------------------
-    // LOCAL STORAGE & CLOUD REST SYNC (No External CDN SDK Needed)
+    // LOCAL STORAGE + SUPABASE REST SYNC (portfolio_state -> id='main')
     // -------------------------------------------------------------------
     function loadLocalState() {
       try {
-        const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          if (parsed.supabase && parsed.supabase.url) {
-            appState.supabase.url = parsed.supabase.url.replace(/\/+$/, "");
-          }
-          if (parsed.supabase && parsed.supabase.anonKey) {
-            appState.supabase.anonKey = parsed.supabase.anonKey.trim();
-          }
-          if (parsed.supabase && parsed.supabase.bucket) {
-            appState.supabase.bucket = parsed.supabase.bucket.trim();
+        const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.supabase) {
+            if (parsed.supabase.url) appState.supabase.url = parsed.supabase.url.replace(/\/+$/, "");
+            if (parsed.supabase.anonKey) appState.supabase.anonKey = parsed.supabase.anonKey.trim();
+            if (parsed.supabase.bucket) appState.supabase.bucket = parsed.supabase.bucket.trim();
           }
           if (Array.isArray(parsed.videos) && parsed.videos.length > 0) {
-            appState.videos = normalizeVideoList(parsed.videos);
+            appState.videos = normalizeVideos(parsed.videos);
           }
-          if (parsed.socialConfig) {
+          if (parsed.socialConfig && Array.isArray(parsed.socialConfig.links)) {
             appState.socialConfig = parsed.socialConfig;
           }
-          if (parsed.resumeConfig) {
-            appState.resumeConfig = parsed.resumeConfig;
-            if (appState.resumeConfig.pdfUrl) {
-              appState.resumeConfig.pdfUrl = normalizeCloudUrl(appState.resumeConfig.pdfUrl);
-            }
+          if (parsed.resumeConfig && parsed.resumeConfig.pdfUrl) {
+            appState.resumeConfig = Object.assign({}, parsed.resumeConfig, {
+              pdfUrl: toWorkerUrl(parsed.resumeConfig.pdfUrl)
+            });
           }
         }
-        appState.videos = normalizeVideoList(appState.videos);
+        appState.videos = normalizeVideos(appState.videos);
+        if (appState.resumeConfig && appState.resumeConfig.pdfUrl) {
+          appState.resumeConfig.pdfUrl = toWorkerUrl(appState.resumeConfig.pdfUrl);
+        }
         if (sessionStorage.getItem(OWNER_SESSION_KEY) === "1") {
           appState.isOwnerUnlocked = true;
         }
       } catch (e) {
-        console.warn("Local storage load skipped:", e);
+        console.warn("Local storage read skipped:", e);
       }
     }
 
@@ -1125,23 +976,19 @@
           resumeConfig: appState.resumeConfig
         }));
       } catch (e) {
-        console.warn("Local storage save skipped:", e);
+        console.warn("Local storage write skipped:", e);
       }
     }
 
-    function isCloudConfigured() {
-      return Boolean(getWorkerBaseUrl() && appState.supabase && appState.supabase.anonKey);
-    }
-
-    function updateCloudBadge(status, label) {
+    function updateCloudBadge(state, label) {
       const dot = document.getElementById("cloud-status-dot");
       const text = document.getElementById("cloud-status-text");
       if (!dot || !text) return;
       dot.className = "w-2 h-2 rounded-full";
-      if (status === "live") {
+      if (state === "live") {
         dot.classList.add("bg-emerald-400");
         text.textContent = label || "Cloud Live";
-      } else if (status === "syncing") {
+      } else if (state === "syncing") {
         dot.classList.add("bg-cyan-400", "animate-ping");
         text.textContent = label || "Syncing...";
       } else {
@@ -1155,15 +1002,14 @@
       const anonKey = (appState.supabase.anonKey || "").trim();
 
       if (!anonKey) {
-        updateCloudBadge("setup", "Add API Key");
-        if (showFeedback) showToast("Open Cloud Setup and paste your Supabase Publishable/Anon Key first.");
+        updateCloudBadge("setup", "Cloud Setup");
+        if (showFeedback) showToast("Open Cloud Setup and paste your Supabase Publishable Key first.");
         return;
       }
 
       updateCloudBadge("syncing", "Syncing...");
       try {
-        const endpoint = `${workerBase}/rest/v1/portfolio_state?id=eq.main&select=*`;
-        const res = await fetch(endpoint, {
+        const res = await fetch(`${workerBase}/rest/v1/portfolio_state?id=eq.main&select=*`, {
           method: "GET",
           headers: {
             "apikey": anonKey,
@@ -1172,37 +1018,33 @@
           }
         });
 
-        if (!res.ok) {
-          throw new Error(`HTTP ${res.status}`);
-        }
-
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const rows = await res.json();
         updateCloudBadge("live", "Cloud Live");
 
         if (Array.isArray(rows) && rows.length > 0) {
           const row = rows[0];
           if (Array.isArray(row.videos) && row.videos.length > 0) {
-            appState.videos = normalizeVideoList(row.videos);
+            appState.videos = normalizeVideos(row.videos);
           }
           if (row.social_config && Array.isArray(row.social_config.links)) {
             appState.socialConfig = row.social_config;
           }
-          if (row.resume_config) {
-            appState.resumeConfig = row.resume_config;
-            if (appState.resumeConfig.pdfUrl) {
-              appState.resumeConfig.pdfUrl = normalizeCloudUrl(appState.resumeConfig.pdfUrl);
-            }
+          if (row.resume_config && row.resume_config.pdfUrl) {
+            appState.resumeConfig = Object.assign({}, row.resume_config, {
+              pdfUrl: toWorkerUrl(row.resume_config.pdfUrl)
+            });
           }
           saveLocalState();
           renderAllSections();
-          if (showFeedback) showToast("Synced latest videos & links from cloud!");
+          if (showFeedback) showToast("Synced latest portfolio state from cloud!");
         } else if (showFeedback) {
-          showToast("Connected to Cloud Live (no remote row yet — click Push Local → Cloud).");
+          showToast("Connected to Cloud Live! Click Push Local → Cloud to save current data.");
         }
       } catch (err) {
-        console.error("Cloud pull failed:", err);
-        updateCloudBadge("setup", "Cloud Offline");
-        if (showFeedback) showToast("Could not reach cloud: " + err.message);
+        console.error("Cloud sync error:", err);
+        updateCloudBadge("setup", "Offline Mode");
+        if (showFeedback) showToast("Cloud sync skipped: " + err.message);
       }
     }
 
@@ -1212,8 +1054,8 @@
       const anonKey = (appState.supabase.anonKey || "").trim();
 
       if (!anonKey) {
-        updateCloudBadge("setup", "Add API Key");
-        if (showFeedback) showToast("Saved locally. Add your Supabase Anon Key in Cloud Setup to sync across devices.");
+        updateCloudBadge("setup", "Cloud Setup");
+        if (showFeedback) showToast("Saved locally. Add Supabase Key in Cloud Setup to sync across devices.");
         return false;
       }
 
@@ -1221,9 +1063,11 @@
       try {
         const payload = {
           id: "main",
-          videos: normalizeVideoList(appState.videos),
+          videos: normalizeVideos(appState.videos),
           social_config: appState.socialConfig,
-          resume_config: appState.resumeConfig,
+          resume_config: Object.assign({}, appState.resumeConfig, {
+            pdfUrl: toWorkerUrl(appState.resumeConfig.pdfUrl || "")
+          }),
           updated_at: new Date().toISOString()
         };
 
@@ -1239,15 +1083,15 @@
         });
 
         if (!res.ok) {
-          const errText = await res.text();
-          throw new Error(`HTTP ${res.status}: ${errText.slice(0, 120)}`);
+          const text = await res.text();
+          throw new Error(`HTTP ${res.status}: ${text.slice(0, 120)}`);
         }
 
         updateCloudBadge("live", "Cloud Live");
         if (showFeedback) showToast("Saved & synced to cloud across all devices!");
         return true;
       } catch (err) {
-        console.error("Cloud push failed:", err);
+        console.error("Cloud save error:", err);
         updateCloudBadge("setup", "Sync Error");
         if (showFeedback) showToast("Cloud sync failed: " + err.message);
         return false;
@@ -1255,7 +1099,7 @@
     }
 
     // -------------------------------------------------------------------
-    // MOBILE & DESKTOP DIRECT FILE UPLOAD TO SUPABASE BUCKET VIA WORKER
+    // FILE UPLOAD VIA CLOUDFLARE WORKER (XHR Progress + 50MB Guard)
     // -------------------------------------------------------------------
     async function uploadFileToCloudBucket(file, folderName, onProgress) {
       const workerBase = getWorkerBaseUrl();
@@ -1263,17 +1107,16 @@
       const bucket = (appState.supabase.bucket || "portfolio-videos").trim();
 
       if (!anonKey) {
-        throw new Error("Missing Supabase Anon Key in Cloud Setup.");
+        throw new Error("Paste your Supabase Publishable Key in Cloud Setup first.");
       }
 
-      // Enforce 50 MB limit cleanly before attempting upload
       const maxBytes = 50 * 1024 * 1024;
       if (file.size > maxBytes) {
         const mb = (file.size / (1024 * 1024)).toFixed(1);
-        throw new Error(`File is ${mb} MB (Supabase Free limit is 50 MB). Compress to H.264 MP4 under 50 MB.`);
+        throw new Error(`File is ${mb} MB (Supabase Free limit is 50 MB). Please compress under 50 MB.`);
       }
 
-      const cleanName = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+      const cleanName = file.name.replace(/[^a-zA-Z0-9._()-]/g, "_");
       const objectPath = `${folderName}/${Date.now()}-${cleanName}`;
       const uploadUrl = `${workerBase}/storage/v1/object/${encodeURIComponent(bucket)}/${objectPath}`;
 
@@ -1287,16 +1130,14 @@
 
         xhr.upload.onprogress = function(e) {
           if (e.lengthComputable && typeof onProgress === "function") {
-            const pct = Math.min(99, Math.round((e.loaded / e.total) * 100));
-            onProgress(pct);
+            onProgress(Math.min(99, Math.round((e.loaded / e.total) * 100)));
           }
         };
 
         xhr.onload = function() {
           if (xhr.status >= 200 && xhr.status < 300) {
             if (typeof onProgress === "function") onProgress(100);
-            const publicUrl = `${workerBase}/storage/v1/object/public/${encodeURIComponent(bucket)}/${objectPath}`;
-            resolve(publicUrl);
+            resolve(`${workerBase}/storage/v1/object/public/${encodeURIComponent(bucket)}/${objectPath}`);
           } else {
             let detail = xhr.responseText || `HTTP ${xhr.status}`;
             try {
@@ -1308,7 +1149,7 @@
         };
 
         xhr.onerror = function() {
-          reject(new Error("Network error while uploading through Cloudflare Worker. Check mobile signal or file size."));
+          reject(new Error("Network error uploading through Cloudflare Worker."));
         };
 
         xhr.send(file);
@@ -1316,7 +1157,7 @@
     }
 
     // -------------------------------------------------------------------
-    // OWNER MODE PIN AUTHENTICATION
+    // OWNER MODE AUTHENTICATION (PIN: 3040)
     // -------------------------------------------------------------------
     async function sha256Hex(str) {
       if (window.crypto && window.crypto.subtle) {
@@ -1356,7 +1197,7 @@
         closeOwnerLoginModal();
         showToast("Owner Studio Mode unlocked!");
       } else {
-        showToast("Incorrect PIN. Default studio PIN is 3040.");
+        showToast("Incorrect Studio PIN.");
       }
     }
 
@@ -1365,11 +1206,11 @@
       sessionStorage.removeItem(OWNER_SESSION_KEY);
       applyOwnerUI();
       renderAllSections();
-      showToast("Locked into Visitor Mode.");
+      showToast("Locked into Public Visitor Mode.");
     }
 
     // -------------------------------------------------------------------
-    // CLOUD SETUP MODAL HANDLERS
+    // CLOUD SETUP MODAL
     // -------------------------------------------------------------------
     function openCloudSetupModal() {
       document.getElementById("cfg-supabase-url").value = getWorkerBaseUrl();
@@ -1387,136 +1228,184 @@
       appState.supabase.url = document.getElementById("cfg-supabase-url").value.trim().replace(/\/+$/, "");
       appState.supabase.anonKey = document.getElementById("cfg-supabase-key").value.trim();
       appState.supabase.bucket = document.getElementById("cfg-supabase-bucket").value.trim() || "portfolio-videos";
-      appState.videos = normalizeVideoList(appState.videos);
+      appState.videos = normalizeVideos(appState.videos);
+      if (appState.resumeConfig && appState.resumeConfig.pdfUrl) {
+        appState.resumeConfig.pdfUrl = toWorkerUrl(appState.resumeConfig.pdfUrl);
+      }
       saveLocalState();
       closeCloudSetupModal();
       await syncCloudStateNow(true);
     }
 
     // -------------------------------------------------------------------
-    // VIDEOS & REELS RENDERING + CRUD
+    // 16:9 WIDESCREEN & 9:16 VERTICAL GRIDS + PROCEDURAL CANVAS POSTERS
     // -------------------------------------------------------------------
-    function renderCategoryPills() {
-      const container = document.getElementById("category-pills");
+    function isVerticalVideo(vid) {
+      return vid.aspectRatio === "9:16" || vid.category === "Reels & Shorts";
+    }
+
+    function renderWidescreenCategoryPills() {
+      const container = document.getElementById("widescreen-category-pills");
       if (!container) return;
-      const categories = ["All", "Motion Graphics", "Reels & Shorts", "Commercial & Color", "3D Motion"];
-      container.innerHTML = categories.map(cat => {
-        const active = appState.activeCategory === cat;
+      const cats = ["All", "Motion Graphics", "Commercial & Color", "3D Motion"];
+      container.innerHTML = cats.map(cat => {
+        const active = appState.active16Category === cat;
         const cls = active
-          ? "bg-cyan-400 text-slate-950 font-semibold shadow-lg shadow-cyan-500/20"
-          : "bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10";
-        return `<button type="button" onclick="setVideoCategory('${escapeAttr(cat)}')" class="px-4 py-2 rounded-xl text-xs transition-all ${cls}">${escapeHtml(cat)}</button>`;
+          ? "bg-cyan-400 text-slate-950 font-bold shadow-lg shadow-cyan-500/20"
+          : "bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 font-medium";
+        return `<button type="button" onclick="set16Category('${escapeAttr(cat)}')" class="px-4 py-2 rounded-xl text-xs transition-all ${cls}">${escapeHtml(cat)}</button>`;
       }).join("");
     }
 
-    function setVideoCategory(cat) {
-      appState.activeCategory = cat;
-      renderCategoryPills();
-      renderVideoGrid();
+    function set16Category(cat) {
+      appState.active16Category = cat;
+      renderWidescreenCategoryPills();
+      renderVideoGrids();
     }
 
-    function getThemeGradient(theme) {
-      switch (theme) {
-        case "teal-amber": return "from-teal-900/80 via-slate-900 to-amber-900/70";
-        case "magenta-cyan": return "from-fuchsia-900/80 via-slate-900 to-cyan-900/80";
-        case "gold-obsidian": return "from-amber-800/70 via-zinc-950 to-stone-900";
-        default: return "from-cyan-900/80 via-slate-900 to-violet-900/80";
-      }
-    }
+    function buildVideoCardHTML(vid) {
+      const vertical = isVerticalVideo(vid);
+      const aspectClass = vertical ? "aspect-[9/16]" : "aspect-video";
+      const softwareTags = (vid.software || []).map(sw =>
+        `<span class="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 font-mono text-[10px] text-gray-300">${escapeHtml(sw)}</span>`
+      ).join("");
 
-    function renderVideoGrid() {
-      const grid = document.getElementById("video-grid");
-      if (!grid) return;
+      return `
+        <article class="glass-panel card-lift rounded-3xl overflow-hidden flex flex-col justify-between group">
+          <div>
+            <!-- Aspect-Accurate Poster Thumbnail -->
+            <div onclick="openVideoPlayer('${escapeAttr(vid.id)}')"
+              class="relative ${aspectClass} bg-slate-950 overflow-hidden cursor-pointer border-b border-white/10">
+              <canvas data-poster-id="${escapeAttr(vid.id)}" class="card-poster-canvas w-full h-full block"></canvas>
 
-      const filtered = appState.activeCategory === "All"
-        ? appState.videos
-        : appState.videos.filter(v => v.category === appState.activeCategory);
-
-      if (filtered.length === 0) {
-        grid.innerHTML = `<div class="col-span-full glass-card rounded-3xl p-10 text-center text-sm text-gray-400">No videos in this category yet.</div>`;
-        return;
-      }
-
-      grid.innerHTML = filtered.map(vid => {
-        const isVertical = vid.aspectRatio === "9:16";
-        const hasDirectMp4 = Boolean(vid.videoSrc && vid.videoSrc.trim());
-        const softwareTags = (vid.software || []).map(sw =>
-          `<span class="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 font-mono text-[10px] text-gray-300">${escapeHtml(sw)}</span>`
-        ).join("");
-
-        return `
-          <article class="glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between group">
-            <div>
-              <!-- Thumbnail Preview -->
-              <div onclick="openVideoPlayer('${escapeAttr(vid.id)}')"
-                class="relative aspect-video bg-gradient-to-br ${getThemeGradient(vid.presetTheme)} overflow-hidden cursor-pointer border-b border-white/10">
-                <!-- Decorative Studio Grid Lines -->
-                <div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(circle at 70% 30%, rgba(0,240,255,0.45), transparent 55%);"></div>
-
-                <!-- Top Badges -->
-                <div class="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 z-10">
-                  <span class="px-2.5 py-1 rounded-lg bg-black/65 backdrop-blur-md font-mono text-[10px] text-cyan-300 border border-white/10">
-                    ${escapeHtml(vid.category)}
+              <!-- Top Badges -->
+              <div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between gap-1.5 z-10">
+                <span class="px-2 py-0.5 rounded-lg bg-black/75 backdrop-blur-md font-mono text-[10px] text-cyan-300 border border-white/10 truncate">
+                  ${escapeHtml(vid.category)}
+                </span>
+                <div class="flex items-center gap-1 shrink-0">
+                  <span class="px-1.5 py-0.5 rounded-lg ${vertical ? 'bg-violet-500/35 text-violet-100 border-violet-400/40' : 'bg-black/75 text-gray-200 border-white/10'} backdrop-blur-md font-mono text-[10px] border">
+                    ${vertical ? '9:16' : '16:9'}
                   </span>
-                  <div class="flex items-center gap-1.5">
-                    <span class="px-2 py-1 rounded-lg ${isVertical ? 'bg-violet-500/30 text-violet-200 border-violet-400/40' : 'bg-black/65 text-gray-200 border-white/10'} backdrop-blur-md font-mono text-[10px] border">
-                      ${escapeHtml(vid.aspectRatio || '16:9')}
-                    </span>
-                    <span class="px-2 py-1 rounded-lg bg-black/65 backdrop-blur-md font-mono text-[10px] text-white border border-white/10">
-                      ${escapeHtml(vid.duration || '00:30')}
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Center Play Icon -->
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="w-14 h-14 rounded-full bg-white/15 group-hover:bg-cyan-400 text-white group-hover:text-slate-950 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-xl transition-all group-hover:scale-110">
-                    <svg class="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                  </div>
-                </div>
-
-                <!-- Stream Type Indicator -->
-                <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[10px] font-mono">
-                  <span class="${hasDirectMp4 ? 'text-emerald-300' : 'text-amber-300'} bg-black/65 px-2 py-0.5 rounded border border-white/10">
-                    ${hasDirectMp4 ? '● HD CLOUD STREAM' : '◈ MOTION GRAPHICS PREVIEW'}
+                  <span class="px-1.5 py-0.5 rounded-lg bg-black/75 backdrop-blur-md font-mono text-[10px] text-white border border-white/10">
+                    ${escapeHtml(vid.duration || '00:30')}
                   </span>
                 </div>
               </div>
 
-              <!-- Card Body -->
-              <div class="p-5 space-y-2.5">
-                <h3 onclick="openVideoPlayer('${escapeAttr(vid.id)}')"
-                  class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors cursor-pointer leading-snug">
-                  ${escapeHtml(vid.title)}
-                </h3>
-                <p class="text-xs text-gray-400 leading-relaxed line-clamp-2">
-                  ${escapeHtml(vid.description || '')}
-                </p>
-                <div class="flex flex-wrap gap-1.5 pt-1">${softwareTags}</div>
+              <!-- Center Play Button -->
+              <div class="absolute inset-0 flex items-center justify-center bg-black/15 group-hover:bg-black/5 transition-colors">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/15 group-hover:bg-cyan-400 text-white group-hover:text-slate-950 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-2xl transition-all group-hover:scale-110">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                </div>
+              </div>
+
+              <!-- Bottom HD Stream Indicator -->
+              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono">
+                <span class="text-emerald-300 bg-black/75 px-2 py-0.5 rounded border border-white/10 truncate">
+                  ● HD EDGE STREAM
+                </span>
               </div>
             </div>
 
-            <!-- Owner Action Footer -->
-            <div class="owner-only px-5 py-3 border-t border-white/10 bg-black/30 items-center justify-between gap-2 w-full">
-              <button type="button" onclick="openVideoModal('${escapeAttr(vid.id)}')"
-                class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-medium text-cyan-300">
-                Edit Video
-              </button>
-              <button type="button" onclick="deleteVideoItem('${escapeAttr(vid.id)}')"
-                class="px-3 py-1.5 rounded-lg bg-rose-500/15 hover:bg-rose-500/30 text-xs font-medium text-rose-300">
-                Delete
-              </button>
+            <!-- Card Metadata -->
+            <div class="p-4 sm:p-5 space-y-2">
+              <h3 onclick="openVideoPlayer('${escapeAttr(vid.id)}')"
+                class="font-bold text-base sm:text-lg text-white group-hover:text-cyan-300 transition-colors cursor-pointer leading-snug">
+                ${escapeHtml(vid.title)}
+              </h3>
+              <p class="text-xs text-gray-400 leading-relaxed line-clamp-2">
+                ${escapeHtml(vid.description || '')}
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-1">${softwareTags}</div>
             </div>
-          </article>
-        `;
-      }).join("");
+          </div>
+
+          <!-- Owner Edit / Delete Controls -->
+          <div class="owner-only px-4 py-2.5 border-t border-white/10 bg-black/35 items-center justify-between gap-2 w-full">
+            <button type="button" onclick="openVideoModal(null, '${escapeAttr(vid.id)}')"
+              class="px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold text-cyan-300">
+              Edit
+            </button>
+            <button type="button" onclick="deleteVideoItem('${escapeAttr(vid.id)}')"
+              class="px-3 py-1 rounded-lg bg-rose-500/15 hover:bg-rose-500/30 text-xs font-semibold text-rose-300">
+              Delete
+            </button>
+          </div>
+        </article>
+      `;
     }
 
-    function openVideoModal(videoId) {
+    function renderVideoGrids() {
+      const grid16 = document.getElementById("video-grid-16x9");
+      const grid9 = document.getElementById("video-grid-9x16");
+      if (!grid16 || !grid9) return;
+
+      const all16 = appState.videos.filter(v => !isVerticalVideo(v));
+      const filtered16 = appState.active16Category === "All"
+        ? all16
+        : all16.filter(v => v.category === appState.active16Category);
+
+      grid16.innerHTML = filtered16.length > 0
+        ? filtered16.map(buildVideoCardHTML).join("")
+        : `<div class="col-span-full glass-panel rounded-3xl p-8 text-center text-xs text-gray-400">No 16:9 videos in this category yet.</div>`;
+
+      const all9 = appState.videos.filter(v => isVerticalVideo(v));
+      grid9.innerHTML = all9.length > 0
+        ? all9.map(buildVideoCardHTML).join("")
+        : `<div class="col-span-full glass-panel rounded-3xl p-8 text-center text-xs text-gray-400">No 9:16 vertical reels added yet.</div>`;
+
+      paintAllCardPosters();
+    }
+
+    function paintAllCardPosters() {
+      document.querySelectorAll(".card-poster-canvas").forEach(canvas => {
+        const vidId = canvas.getAttribute("data-poster-id");
+        const vid = appState.videos.find(v => v.id === vidId);
+        if (!vid) return;
+
+        const vertical = isVerticalVideo(vid);
+        const w = canvas.width = vertical ? 360 : 640;
+        const h = canvas.height = vertical ? 640 : 360;
+        const ctx = canvas.getContext("2d");
+
+        let c1 = "#071929", c2 = "#1c0e36", accent = "#00f0ff";
+        if (vid.presetTheme === "magenta-cyan") {
+          c1 = "#2a0924"; c2 = "#082032"; accent = "#f472b6";
+        } else if (vid.presetTheme === "amber-cyan") {
+          c1 = "#261607"; c2 = "#081f2c"; accent = "#f59e0b";
+        }
+
+        const grad = ctx.createLinearGradient(0, 0, w, h);
+        grad.addColorStop(0, c1);
+        grad.addColorStop(1, c2);
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, w, h);
+
+        // Studio viewfinder frame
+        ctx.strokeStyle = "rgba(255,255,255,0.08)";
+        ctx.lineWidth = 1;
+        ctx.strokeRect(16, 16, w - 32, h - 32);
+
+        // Orbital motion ring
+        ctx.beginPath();
+        ctx.arc(w * 0.5, h * 0.48, Math.min(w, h) * 0.27, 0, Math.PI * 2);
+        ctx.strokeStyle = accent + "44";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // Subtle watermark text
+        ctx.fillStyle = "rgba(255,255,255,0.06)";
+        ctx.font = `800 ${vertical ? 52 : 64}px 'Plus Jakarta Sans', sans-serif`;
+        ctx.textAlign = "center";
+        ctx.fillText(vertical ? "9:16" : "VS", w * 0.5, h * 0.51);
+      });
+    }
+
+    function openVideoModal(defaultAspect = "16:9", videoId = null) {
       const modal = document.getElementById("video-edit-modal");
       const heading = document.getElementById("video-modal-heading");
-      const progressWrap = document.getElementById("vid-upload-progress-wrap");
-      progressWrap.classList.add("hidden");
+      document.getElementById("vid-upload-progress-wrap").classList.add("hidden");
       document.getElementById("vid-file-input").value = "";
 
       if (videoId) {
@@ -1527,21 +1416,22 @@
         document.getElementById("vid-title").value = vid.title || "";
         document.getElementById("vid-category").value = vid.category || "Motion Graphics";
         document.getElementById("vid-aspect").value = vid.aspectRatio || "16:9";
-        document.getElementById("vid-duration").value = vid.duration || "00:45";
-        document.getElementById("vid-url").value = normalizeCloudUrl(vid.videoSrc || "");
+        document.getElementById("vid-duration").value = vid.duration || "00:35";
+        document.getElementById("vid-url").value = toWorkerUrl(vid.videoSrc || "");
         document.getElementById("vid-software").value = (vid.software || []).join(", ");
         document.getElementById("vid-theme").value = vid.presetTheme || "cyan-violet";
         document.getElementById("vid-desc").value = vid.description || "";
       } else {
-        heading.textContent = "Add New Video / Reel";
+        const is9 = defaultAspect === "9:16";
+        heading.textContent = is9 ? "Add 9:16 Vertical Reel" : "Add 16:9 Widescreen Video";
         document.getElementById("vid-edit-id").value = "";
         document.getElementById("vid-title").value = "";
-        document.getElementById("vid-category").value = "Motion Graphics";
-        document.getElementById("vid-aspect").value = "16:9";
-        document.getElementById("vid-duration").value = "00:45";
+        document.getElementById("vid-category").value = is9 ? "Reels & Shorts" : "Motion Graphics";
+        document.getElementById("vid-aspect").value = is9 ? "9:16" : "16:9";
+        document.getElementById("vid-duration").value = is9 ? "00:30" : "00:45";
         document.getElementById("vid-url").value = "";
-        document.getElementById("vid-software").value = "After Effects, Premiere Pro";
-        document.getElementById("vid-theme").value = "cyan-violet";
+        document.getElementById("vid-software").value = "After Effects";
+        document.getElementById("vid-theme").value = is9 ? "amber-cyan" : "cyan-violet";
         document.getElementById("vid-desc").value = "";
       }
       modal.classList.remove("hidden");
@@ -1569,17 +1459,17 @@
       saveBtn.classList.add("opacity-50");
 
       try {
-        const publicWorkerUrl = await uploadFileToCloudBucket(file, "videos", pct => {
+        const workerMediaUrl = await uploadFileToCloudBucket(file, "videos", pct => {
           pctEl.textContent = pct + "%";
           barEl.style.width = pct + "%";
         });
 
-        document.getElementById("vid-url").value = publicWorkerUrl;
+        document.getElementById("vid-url").value = workerMediaUrl;
         const titleInput = document.getElementById("vid-title");
         if (!titleInput.value.trim()) {
           titleInput.value = file.name.replace(/\.[^/.]+$/, "").replace(/[-_]+/g, " ");
         }
-        statusEl.textContent = "Upload complete! Ready to save.";
+        statusEl.textContent = "Upload complete! Click Save & Sync.";
         showToast("Video uploaded to cloud! Click Save & Sync to publish.");
       } catch (err) {
         statusEl.textContent = "Upload failed: " + err.message;
@@ -1596,8 +1486,8 @@
       const title = document.getElementById("vid-title").value.trim();
       const category = document.getElementById("vid-category").value;
       const aspectRatio = document.getElementById("vid-aspect").value;
-      const duration = document.getElementById("vid-duration").value.trim() || "00:30";
-      const videoSrc = normalizeCloudUrl(document.getElementById("vid-url").value.trim());
+      const duration = document.getElementById("vid-duration").value.trim() || "00:35";
+      const videoSrc = toWorkerUrl(document.getElementById("vid-url").value.trim());
       const software = document.getElementById("vid-software").value.split(",").map(s => s.trim()).filter(Boolean);
       const presetTheme = document.getElementById("vid-theme").value;
       const description = document.getElementById("vid-desc").value.trim();
@@ -1606,36 +1496,31 @@
         const idx = appState.videos.findIndex(v => v.id === editId);
         if (idx !== -1) {
           appState.videos[idx] = Object.assign({}, appState.videos[idx], {
-            title, category, aspectRatio, duration,
-            videoSrc,
-            videoType: videoSrc ? "DirectMP4" : "ProceduralReel",
-            software, presetTheme, description
+            title, category, aspectRatio, duration, videoSrc, software, presetTheme, description
           });
         }
       } else {
         appState.videos.unshift({
           id: "vid-" + Date.now(),
           title, category, aspectRatio, duration,
-          videoSrc,
-          videoType: videoSrc ? "DirectMP4" : "ProceduralReel",
-          resolution: aspectRatio === "9:16" ? "1080×1920 • 9:16" : "1080p 60fps",
-          software, presetTheme, description
+          resolution: aspectRatio === "9:16" ? "1080x1920 • 9:16" : "1080p 60fps",
+          videoSrc, software, presetTheme, description
         });
       }
 
-      renderVideoGrid();
+      renderVideoGrids();
       closeVideoModal();
       await pushStateToCloud(true);
     }
 
     async function deleteVideoItem(videoId) {
       appState.videos = appState.videos.filter(v => v.id !== videoId);
-      renderVideoGrid();
+      renderVideoGrids();
       await pushStateToCloud(true);
     }
 
     // -------------------------------------------------------------------
-    // VIDEO PLAYER MODAL (Direct MP4 + Procedural Motion Graphics Canvas)
+    // ADAPTIVE 16:9 / 9:16 VIDEO MODAL PLAYER
     // -------------------------------------------------------------------
     function playFeaturedShowreel() {
       const showreel = appState.videos.find(v => v.id === "reel-showreel-2026") || appState.videos[0];
@@ -1646,39 +1531,42 @@
       const vid = appState.videos.find(v => v.id === videoId);
       if (!vid) return;
 
+      const vertical = isVerticalVideo(vid);
       const modal = document.getElementById("video-player-modal");
+      const dialog = document.getElementById("player-modal-dialog");
+      const wrapper = document.getElementById("player-media-wrapper");
       const html5Video = document.getElementById("modal-html5-video");
-      const procCanvas = document.getElementById("modal-procedural-canvas");
       const errorBox = document.getElementById("player-error-box");
 
+      // Adapt dialog width & stage aspect ratio cleanly
+      dialog.className = vertical
+        ? "w-full max-w-sm glass-panel rounded-3xl overflow-hidden border border-white/15 shadow-2xl flex flex-col max-h-[94vh] mx-auto"
+        : "w-full max-w-4xl glass-panel rounded-3xl overflow-hidden border border-white/15 shadow-2xl flex flex-col max-h-[94vh] mx-auto";
+
+      wrapper.className = vertical
+        ? "relative aspect-[9/16] max-h-[78vh] w-full bg-black flex items-center justify-center overflow-hidden mx-auto"
+        : "relative aspect-video w-full bg-black flex items-center justify-center overflow-hidden";
+
       document.getElementById("player-title").textContent = vid.title;
-      document.getElementById("player-badge").textContent = vid.aspectRatio || "16:9";
+      document.getElementById("player-badge").textContent = vertical ? "9:16" : "16:9";
       document.getElementById("player-software").textContent = (vid.software || []).join(" • ");
       document.getElementById("player-desc").textContent = vid.description || "";
       document.getElementById("player-duration").textContent = vid.duration || "00:30";
 
-      stopProceduralCanvas();
       html5Video.pause();
       html5Video.removeAttribute("src");
       html5Video.load();
-      html5Video.classList.add("hidden");
-      procCanvas.classList.add("hidden");
+      html5Video.classList.remove("hidden");
       errorBox.classList.add("hidden");
 
-      const streamUrl = normalizeCloudUrl(vid.videoSrc || "");
-      if (streamUrl) {
-        html5Video.classList.remove("hidden");
-        document.getElementById("player-direct-link").href = streamUrl;
-        html5Video.onerror = function() {
-          html5Video.classList.add("hidden");
-          errorBox.classList.remove("hidden");
-        };
-        html5Video.src = streamUrl;
-        html5Video.play().catch(() => {});
-      } else {
-        procCanvas.classList.remove("hidden");
-        startProceduralCanvas(procCanvas, vid);
-      }
+      const streamUrl = toWorkerUrl(vid.videoSrc || "");
+      document.getElementById("player-direct-link").href = streamUrl;
+      html5Video.onerror = function() {
+        html5Video.classList.add("hidden");
+        errorBox.classList.remove("hidden");
+      };
+      html5Video.src = streamUrl;
+      html5Video.play().catch(() => {});
 
       modal.classList.remove("hidden");
     }
@@ -1686,56 +1574,10 @@
     function closeVideoPlayer() {
       const modal = document.getElementById("video-player-modal");
       const html5Video = document.getElementById("modal-html5-video");
-      stopProceduralCanvas();
       html5Video.pause();
       html5Video.removeAttribute("src");
       html5Video.load();
       modal.classList.add("hidden");
-    }
-
-    function stopProceduralCanvas() {
-      if (activeProceduralAnimId) {
-        cancelAnimationFrame(activeProceduralAnimId);
-        activeProceduralAnimId = null;
-      }
-    }
-
-    function startProceduralCanvas(canvas, vid) {
-      const ctx = canvas.getContext("2d");
-      let t = 0;
-
-      function renderFrame() {
-        const w = canvas.width = canvas.clientWidth || 800;
-        const h = canvas.height = canvas.clientHeight || 450;
-        t += 0.025;
-
-        ctx.fillStyle = "#07090E";
-        ctx.fillRect(0, 0, w, h);
-
-        // Animated Energy Rings
-        for (let i = 0; i < 5; i++) {
-          const radius = 45 + i * 38 + Math.sin(t + i) * 14;
-          ctx.beginPath();
-          ctx.arc(w / 2, h / 2, Math.max(10, radius), t * (i % 2 === 0 ? 1 : -1), t * (i % 2 === 0 ? 1 : -1) + Math.PI * 1.35);
-          ctx.strokeStyle = i % 2 === 0 ? "rgba(0, 240, 255, 0.45)" : "rgba(139, 92, 246, 0.45)";
-          ctx.lineWidth = 3;
-          ctx.stroke();
-        }
-
-        // Center Title & Timecode
-        ctx.fillStyle = "#FFFFFF";
-        ctx.font = "700 22px 'Space Grotesk', sans-serif";
-        ctx.textAlign = "center";
-        ctx.fillText(vid.title, w / 2, h / 2 - 6);
-
-        ctx.fillStyle = "#00F0FF";
-        ctx.font = "500 12px 'JetBrains Mono', monospace";
-        const secs = Math.floor(t * 2) % 60;
-        ctx.fillText(`INTERACTIVE MOTION PREVIEW • 00:${String(secs).padStart(2, "0")} • ${(vid.software || []).join(" / ")}`, w / 2, h / 2 + 22);
-
-        activeProceduralAnimId = requestAnimationFrame(renderFrame);
-      }
-      renderFrame();
     }
 
     function startHeroPosterAnimation() {
@@ -1750,20 +1592,19 @@
         t += 0.018;
 
         const grad = ctx.createLinearGradient(0, 0, w, h);
-        grad.addColorStop(0, "#091322");
-        grad.addColorStop(0.5, "#0B0F1A");
-        grad.addColorStop(1, "#180D2B");
+        grad.addColorStop(0, "#081424");
+        grad.addColorStop(0.5, "#0b0f1a");
+        grad.addColorStop(1, "#180d2c");
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, w, h);
 
-        // Orbiting wireframe nodes
         for (let i = 0; i < 6; i++) {
           const angle = t + (i * Math.PI) / 3;
           const x = w / 2 + Math.cos(angle) * (w * 0.26);
-          const y = h / 2 + Math.sin(angle * 1.4) * (h * 0.22);
+          const y = h / 2 + Math.sin(angle * 1.35) * (h * 0.22);
           ctx.beginPath();
           ctx.arc(x, y, 4, 0, Math.PI * 2);
-          ctx.fillStyle = i % 2 === 0 ? "#00F0FF" : "#8B5CF6";
+          ctx.fillStyle = i % 2 === 0 ? "#00f0ff" : "#8b5cf6";
           ctx.fill();
 
           ctx.beginPath();
@@ -1773,146 +1614,37 @@
           ctx.lineWidth = 1.2;
           ctx.stroke();
         }
-
-        heroAnimId = requestAnimationFrame(loop);
+        requestAnimationFrame(loop);
       }
       loop();
     }
 
     // -------------------------------------------------------------------
-    // SOCIAL HUB RENDERING & CRUD
-    // -------------------------------------------------------------------
-    function renderSocialHub() {
-      const cfg = appState.socialConfig || {};
-      const container = document.getElementById("social-links-container");
-      if (!container) return;
-
-      const links = cfg.links || [];
-      const groups = {};
-      links.forEach(item => {
-        const grp = item.groupHeading || "Creative Channels";
-        if (!groups[grp]) groups[grp] = [];
-        groups[grp].push(item);
-      });
-
-      container.innerHTML = Object.keys(groups).map(groupName => {
-        const cards = groups[groupName].map(item => `
-          <div class="glass-card glass-card-hover rounded-2xl p-5 flex flex-col justify-between gap-4">
-            <div class="space-y-1.5">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded-md bg-cyan-500/15 text-cyan-300 font-mono text-[10px] uppercase">
-                  ${escapeHtml(item.platform)}
-                </span>
-                <div class="owner-only items-center gap-1.5">
-                  <button type="button" onclick="openSocialModal('${escapeAttr(item.id)}')" class="text-[11px] text-cyan-300 hover:underline">Edit</button>
-                  <button type="button" onclick="deleteSocialItem('${escapeAttr(item.id)}')" class="text-[11px] text-rose-400 hover:underline">Del</button>
-                </div>
-              </div>
-              <h3 class="font-display font-bold text-lg text-white">${escapeHtml(item.customHeading)}</h3>
-              <p class="font-mono text-xs text-gray-400">${escapeHtml(item.handle || '')}</p>
-            </div>
-            <a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center justify-between px-4 py-2.5 rounded-xl bg-white/5 hover:bg-cyan-400 hover:text-slate-950 text-xs font-semibold text-white border border-white/10 transition-all">
-              <span>${escapeHtml(item.ctaText || 'Visit Profile')}</span>
-              <span>↗</span>
-            </a>
-          </div>
-        `).join("");
-
-        return `
-          <div class="space-y-4">
-            <h3 class="font-mono text-xs text-gray-400 uppercase tracking-widest">${escapeHtml(groupName)}</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">${cards}</div>
-          </div>
-        `;
-      }).join("");
-    }
-
-    function openSocialModal(socId) {
-      const modal = document.getElementById("social-edit-modal");
-      if (socId) {
-        const item = (appState.socialConfig.links || []).find(s => s.id === socId);
-        if (!item) return;
-        document.getElementById("social-modal-heading").textContent = "Edit Social Card";
-        document.getElementById("soc-edit-id").value = item.id;
-        document.getElementById("soc-heading").value = item.customHeading || "";
-        document.getElementById("soc-platform").value = item.platform || "";
-        document.getElementById("soc-group").value = item.groupHeading || "Video & Visual Portfolios";
-        document.getElementById("soc-handle").value = item.handle || "";
-        document.getElementById("soc-url").value = item.url || "";
-      } else {
-        document.getElementById("social-modal-heading").textContent = "Add Social Card";
-        document.getElementById("soc-edit-id").value = "";
-        document.getElementById("soc-heading").value = "";
-        document.getElementById("soc-platform").value = "Instagram";
-        document.getElementById("soc-group").value = "Video & Visual Portfolios";
-        document.getElementById("soc-handle").value = "@shotby_vishnu";
-        document.getElementById("soc-url").value = "https://";
-      }
-      modal.classList.remove("hidden");
-    }
-
-    function closeSocialModal() {
-      document.getElementById("social-edit-modal").classList.add("hidden");
-    }
-
-    async function saveSocialForm(event) {
-      event.preventDefault();
-      const id = document.getElementById("soc-edit-id").value;
-      const customHeading = document.getElementById("soc-heading").value.trim();
-      const platform = document.getElementById("soc-platform").value.trim();
-      const groupHeading = document.getElementById("soc-group").value.trim() || "Creative Channels";
-      const handle = document.getElementById("soc-handle").value.trim();
-      const url = document.getElementById("soc-url").value.trim();
-
-      if (!appState.socialConfig.links) appState.socialConfig.links = [];
-      if (id) {
-        const item = appState.socialConfig.links.find(s => s.id === id);
-        if (item) Object.assign(item, { customHeading, platform, groupHeading, handle, url });
-      } else {
-        appState.socialConfig.links.push({
-          id: "soc-" + Date.now(),
-          customHeading, platform, groupHeading, handle,
-          ctaText: "Visit " + platform,
-          url
-        });
-      }
-      renderSocialHub();
-      closeSocialModal();
-      await pushStateToCloud(true);
-    }
-
-    async function deleteSocialItem(socId) {
-      appState.socialConfig.links = (appState.socialConfig.links || []).filter(s => s.id !== socId);
-      renderSocialHub();
-      await pushStateToCloud(true);
-    }
-
-    // -------------------------------------------------------------------
-    // RESUME PDF UPLOAD, PREVIEW & DOWNLOAD
+    // RESUME / CV SECTION + FULLSCREEN PDF VIEWER MODAL
     // -------------------------------------------------------------------
     function renderResumeSection() {
       const container = document.getElementById("resume-display-card");
       if (!container) return;
       const cfg = appState.resumeConfig || {};
+
       const titleInput = document.getElementById("resume-title-input");
       const urlInput = document.getElementById("resume-url-input");
       if (titleInput) titleInput.value = cfg.title || "";
-      if (urlInput) urlInput.value = cfg.pdfUrl || "";
+      if (urlInput) urlInput.value = toWorkerUrl(cfg.pdfUrl || "");
 
-      const pdfSrc = normalizeCloudUrl(cfg.pdfUrl || "");
+      const pdfSrc = toWorkerUrl(cfg.pdfUrl || "");
       if (!pdfSrc) {
         container.innerHTML = `
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div class="flex items-center gap-4">
               <div class="w-12 h-12 rounded-2xl bg-rose-500/15 border border-rose-500/30 flex items-center justify-center font-mono font-bold text-xs text-rose-300">PDF</div>
               <div>
-                <h3 class="font-display font-bold text-lg text-white">${escapeHtml(cfg.title || "Vishnu Shaiju — Resume / CV")}</h3>
-                <p class="text-xs text-gray-400 mt-0.5">Request the latest PDF resume via email or unlock Owner Mode to upload a PDF.</p>
+                <h3 class="font-bold text-lg text-white">${escapeHtml(cfg.title || "Vishnu Shaiju — Resume")}</h3>
+                <p class="text-xs text-gray-400 mt-0.5">Request the latest PDF copy directly via email or WhatsApp.</p>
               </div>
             </div>
             <a href="mailto:vishnuvichu3040@gmail.com?subject=Resume%20Request"
-              class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-semibold text-white shrink-0 text-center">
+              class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-bold text-white shrink-0 text-center">
               Request via Email
             </a>
           </div>
@@ -1921,22 +1653,32 @@
       }
 
       container.innerHTML = `
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-2xl bg-rose-500/20 border border-rose-500/40 flex items-center justify-center font-mono font-bold text-xs text-rose-200">PDF</div>
-            <div>
-              <h3 class="font-display font-bold text-lg text-white">${escapeHtml(cfg.title || "Vishnu Shaiju — Resume / CV")}</h3>
-              <p class="font-mono text-xs text-gray-400 mt-0.5">${escapeHtml(cfg.fileName || "Resume.pdf")} ${cfg.updatedAt ? "• Updated " + escapeHtml(cfg.updatedAt) : ""}</p>
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="flex items-start sm:items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500/25 to-amber-500/20 border border-rose-400/40 flex items-center justify-center font-mono font-bold text-sm text-rose-200 shrink-0 shadow-lg">
+              PDF
+            </div>
+            <div class="space-y-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-mono text-[10px]">VERIFIED CV</span>
+                <span class="font-mono text-xs text-gray-400">${escapeHtml(cfg.fileName || "Vishnu Shaiju.pdf")} • ${escapeHtml(cfg.fileSizeLabel || "PDF Document")} • ${escapeHtml(cfg.updatedAt || "Nov 2026")}</span>
+              </div>
+              <h3 class="font-extrabold text-lg sm:text-xl text-white">${escapeHtml(cfg.title || "Vishnu Shaiju — Motion Graphics Designer & Video Editor Resume")}</h3>
+              <p class="text-xs text-gray-400">Preview full resume inline or download the PDF document directly to your device.</p>
             </div>
           </div>
-          <div class="flex items-center gap-2.5 shrink-0">
+
+          <div class="flex flex-wrap items-center gap-3 shrink-0">
             <button type="button" onclick="openPdfViewerModal()"
-              class="px-4 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-semibold text-xs shadow-lg shadow-cyan-500/20">
-              Preview PDF
+              class="px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              <span>Preview PDF</span>
             </button>
+
             <button type="button" onclick="downloadResumePdf()"
-              class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs">
-              Download
+              class="px-4 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/15 font-bold text-xs sm:text-sm transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download PDF</span>
             </button>
           </div>
         </div>
@@ -1946,12 +1688,13 @@
     async function handleResumePdfUpload(event) {
       const file = event.target.files && event.target.files[0];
       if (!file) return;
-      showToast("Uploading PDF resume to cloud...");
+      showToast("Uploading PDF resume via Cloudflare Worker...");
       try {
-        const publicUrl = await uploadFileToCloudBucket(file, "resumes");
+        const publicUrl = await uploadFileToCloudBucket(file, "Pdf");
         appState.resumeConfig.pdfUrl = publicUrl;
         appState.resumeConfig.fileName = file.name;
-        appState.resumeConfig.updatedAt = new Date().toLocaleDateString();
+        appState.resumeConfig.fileSizeLabel = "PDF Document";
+        appState.resumeConfig.updatedAt = new Date().toLocaleDateString("en-US", { month: "short", year: "numeric" });
         renderResumeSection();
         await pushStateToCloud(true);
       } catch (err) {
@@ -1966,18 +1709,19 @@
     }
 
     async function saveResumeDirectUrl() {
-      const val = normalizeCloudUrl(document.getElementById("resume-url-input").value.trim());
+      const val = toWorkerUrl(document.getElementById("resume-url-input").value.trim());
       appState.resumeConfig.pdfUrl = val;
-      appState.resumeConfig.fileName = val.split("/").pop() || "Resume.pdf";
-      appState.resumeConfig.updatedAt = new Date().toLocaleDateString();
+      appState.resumeConfig.fileName = decodeURIComponent(val.split("/").pop() || "Vishnu Shaiju.pdf");
+      appState.resumeConfig.updatedAt = new Date().toLocaleDateString("en-US", { month: "short", year: "numeric" });
       renderResumeSection();
       await pushStateToCloud(true);
     }
 
     function openPdfViewerModal() {
-      const src = normalizeCloudUrl(appState.resumeConfig.pdfUrl || "");
+      const src = toWorkerUrl(appState.resumeConfig.pdfUrl || "");
       if (!src) return;
-      document.getElementById("pdf-modal-title").textContent = appState.resumeConfig.title || "Resume Preview";
+      document.getElementById("pdf-modal-title").textContent = appState.resumeConfig.title || "Vishnu Shaiju — Resume";
+      document.getElementById("pdf-modal-newtab").href = src;
       document.getElementById("pdf-viewer-iframe").src = src;
       document.getElementById("pdf-viewer-modal").classList.remove("hidden");
     }
@@ -1988,13 +1732,109 @@
     }
 
     function downloadResumePdf() {
-      const src = normalizeCloudUrl(appState.resumeConfig.pdfUrl || "");
+      const src = toWorkerUrl(appState.resumeConfig.pdfUrl || "");
       if (!src) return;
-      window.open(src, "_blank", "noopener,noreferrer");
+      const a = document.createElement("a");
+      a.href = src;
+      a.download = appState.resumeConfig.fileName || "Vishnu_Shaiju_Resume.pdf";
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     }
 
     // -------------------------------------------------------------------
-    // SAFE STANDALONE HTML EXPORT (No fragile regex replacements!)
+    // SOCIAL PROFILES RENDERING & OWNER CRUD
+    // -------------------------------------------------------------------
+    function renderSocialProfiles() {
+      const grid = document.getElementById("social-links-grid");
+      if (!grid) return;
+      const links = (appState.socialConfig && appState.socialConfig.links) || [];
+
+      grid.innerHTML = links.map(item => `
+        <div class="glass-panel card-lift rounded-3xl p-5 flex flex-col justify-between gap-4">
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-lg bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-mono text-[10px] uppercase">
+                ${escapeHtml(item.platform)}
+              </span>
+              <div class="owner-only items-center gap-2">
+                <button type="button" onclick="openSocialModal('${escapeAttr(item.id)}')" class="text-[11px] text-cyan-300 hover:underline">Edit</button>
+                <button type="button" onclick="deleteSocialItem('${escapeAttr(item.id)}')" class="text-[11px] text-rose-400 hover:underline">Del</button>
+              </div>
+            </div>
+            <h3 class="font-bold text-lg text-white">${escapeHtml(item.customHeading)}</h3>
+            <p class="font-mono text-xs text-gray-400 truncate">${escapeHtml(item.handle || "")}</p>
+          </div>
+          <a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-between px-4 py-2.5 rounded-xl bg-white/5 hover:bg-cyan-400 hover:text-slate-950 text-xs font-bold text-white border border-white/10 transition-all">
+            <span>${escapeHtml(item.ctaText || "Visit Profile")}</span>
+            <span>↗</span>
+          </a>
+        </div>
+      `).join("");
+    }
+
+    function openSocialModal(socId) {
+      const modal = document.getElementById("social-edit-modal");
+      if (socId) {
+        const item = (appState.socialConfig.links || []).find(s => s.id === socId);
+        if (!item) return;
+        document.getElementById("social-modal-heading").textContent = "Edit Social Profile";
+        document.getElementById("soc-edit-id").value = item.id;
+        document.getElementById("soc-heading").value = item.customHeading || "";
+        document.getElementById("soc-platform").value = item.platform || "";
+        document.getElementById("soc-handle").value = item.handle || "";
+        document.getElementById("soc-url").value = item.url || "";
+      } else {
+        document.getElementById("social-modal-heading").textContent = "Add Social Profile";
+        document.getElementById("soc-edit-id").value = "";
+        document.getElementById("soc-heading").value = "";
+        document.getElementById("soc-platform").value = "YouTube";
+        document.getElementById("soc-handle").value = "@vishnushaiju";
+        document.getElementById("soc-url").value = "https://";
+      }
+      modal.classList.remove("hidden");
+    }
+
+    function closeSocialModal() {
+      document.getElementById("social-edit-modal").classList.add("hidden");
+    }
+
+    async function saveSocialForm(event) {
+      event.preventDefault();
+      const id = document.getElementById("soc-edit-id").value;
+      const customHeading = document.getElementById("soc-heading").value.trim();
+      const platform = document.getElementById("soc-platform").value.trim();
+      const handle = document.getElementById("soc-handle").value.trim();
+      const url = document.getElementById("soc-url").value.trim();
+
+      if (!appState.socialConfig.links) appState.socialConfig.links = [];
+      if (id) {
+        const item = appState.socialConfig.links.find(s => s.id === id);
+        if (item) Object.assign(item, { customHeading, platform, handle, url });
+      } else {
+        appState.socialConfig.links.push({
+          id: "soc-" + Date.now(),
+          customHeading, platform, handle,
+          ctaText: "Visit " + platform,
+          url
+        });
+      }
+      renderSocialProfiles();
+      closeSocialModal();
+      await pushStateToCloud(true);
+    }
+
+    async function deleteSocialItem(socId) {
+      appState.socialConfig.links = (appState.socialConfig.links || []).filter(s => s.id !== socId);
+      renderSocialProfiles();
+      await pushStateToCloud(true);
+    }
+
+    // -------------------------------------------------------------------
+    // CORRUPTION-FREE STANDALONE HTML EXPORT
     // -------------------------------------------------------------------
     function exportStandaloneHTML() {
       try {
@@ -2002,21 +1842,22 @@
         const bodyClone = clone.querySelector("body");
         if (bodyClone) bodyClone.classList.remove("owner-unlocked");
 
-        // Clear transient modals & dynamic containers so exported file boots cleanly
         const bakedEl = clone.querySelector("#portfolio-baked-data");
         if (bakedEl) {
-          const exportPayload = {
+          const payload = {
             ownerPinHash: appState.ownerPinHash,
             supabase: {
               url: getWorkerBaseUrl(),
               anonKey: appState.supabase.anonKey || "",
               bucket: appState.supabase.bucket || "portfolio-videos"
             },
-            videos: normalizeVideoList(appState.videos),
+            videos: normalizeVideos(appState.videos),
             socialConfig: appState.socialConfig,
-            resumeConfig: appState.resumeConfig
+            resumeConfig: Object.assign({}, appState.resumeConfig, {
+              pdfUrl: toWorkerUrl(appState.resumeConfig.pdfUrl || "")
+            })
           };
-          bakedEl.textContent = "\n  " + JSON.stringify(exportPayload, null, 2) + "\n  ";
+          bakedEl.textContent = "\n  " + JSON.stringify(payload, null, 2) + "\n  ";
         }
 
         const htmlString = "<!DOCTYPE html>\n" + clone.outerHTML;
@@ -2029,14 +1870,14 @@
         a.click();
         document.body.removeChild(a);
         setTimeout(() => URL.revokeObjectURL(url), 1500);
-        showToast("Exported clean index.html with all videos & Worker config baked in!");
+        showToast("Exported standalone index.html! Ready to upload to GitHub.");
       } catch (err) {
         showToast("Export failed: " + err.message);
       }
     }
 
     // -------------------------------------------------------------------
-    // CONTACT, CLIPBOARD & HELPERS
+    // CONTACT, CLIPBOARD & ESCAPE HELPERS
     // -------------------------------------------------------------------
     function submitProjectBrief(event) {
       event.preventDefault();
@@ -2044,14 +1885,14 @@
       const service = document.getElementById("brief-service").value;
       const details = document.getElementById("brief-details").value.trim();
       const subject = encodeURIComponent(`Portfolio Inquiry: ${service} — ${name}`);
-      const body = encodeURIComponent(`Hi Vishnu,\n\nName/Brand: ${name}\nService: ${service}\n\nDetails:\n${details}`);
+      const body = encodeURIComponent(`Hi Vishnu,\n\nName/Brand: ${name}\nService: ${service}\n\nProject Brief:\n${details}`);
       window.open(`mailto:vishnuvichu3040@gmail.com?subject=${subject}&body=${body}`, "_blank");
     }
 
     function sendBriefWhatsApp() {
       const name = document.getElementById("brief-name").value.trim() || "Client";
       const service = document.getElementById("brief-service").value;
-      const details = document.getElementById("brief-details").value.trim() || "Interested in working together on a video project.";
+      const details = document.getElementById("brief-details").value.trim() || "Interested in collaborating on a video project.";
       const msg = encodeURIComponent(`Hi Vishnu! I'm ${name} (${service}). ${details}`);
       window.open(`https://wa.me/917736882453?text=${msg}`, "_blank", "noopener,noreferrer");
     }
@@ -2072,7 +1913,7 @@
       const container = document.getElementById("toast-container");
       if (!container) return;
       const toast = document.createElement("div");
-      toast.className = "pointer-events-auto px-4 py-3 rounded-2xl bg-[#0F131D]/95 border border-cyan-500/40 text-xs text-white shadow-2xl backdrop-blur-xl transition-opacity duration-300";
+      toast.className = "pointer-events-auto px-4 py-3 rounded-2xl bg-[#0d111c]/95 border border-cyan-500/40 text-xs text-white shadow-2xl backdrop-blur-xl transition-opacity duration-300";
       toast.textContent = message;
       container.appendChild(toast);
       setTimeout(() => {
@@ -2095,13 +1936,13 @@
     }
 
     function renderAllSections() {
-      renderCategoryPills();
-      renderVideoGrid();
-      renderSocialHub();
+      renderWidescreenCategoryPills();
+      renderVideoGrids();
       renderResumeSection();
+      renderSocialProfiles();
     }
 
-    // Boot Application
+    // Boot Application on Load
     window.addEventListener("DOMContentLoaded", function() {
       loadLocalState();
       applyOwnerUI();
