@@ -97,6 +97,7 @@
         "resolution": "1080p 60fps",
         "software": ["After Effects", "Premiere Pro", "Autodesk Maya"],
         "videoSrc": "https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/portfolio-videos/videos/1795327595878-Showreel.mp4",
+        "thumbnailUrl": "",
         "description": "Flagship montage combining 2.5D camera rigs, dynamic typography, speed-ramped commercial cuts, and 3D modeling & animation shots.",
         "presetTheme": "cyan-violet"
       },
@@ -109,6 +110,7 @@
         "resolution": "1080p 60fps",
         "software": ["After Effects"],
         "videoSrc": "https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/portfolio-videos/videos/zomato%20final.mp4",
+        "thumbnailUrl": "",
         "description": "High-energy kinetic typography and brand promo edit crafted in Adobe After Effects with rhythmic motion curves and crisp visual pacing.",
         "presetTheme": "magenta-cyan"
       },
@@ -121,6 +123,7 @@
         "resolution": "1080x1920 • 9:16",
         "software": ["After Effects"],
         "videoSrc": "https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/portfolio-videos/videos/CR7%20Final%20out.mp4",
+        "thumbnailUrl": "",
         "description": "Vertical 9:16 sports motion graphics reel built in After Effects with velocity keyframing, dynamic text overlays, and beat-synced transitions.",
         "presetTheme": "amber-cyan"
       }
@@ -782,6 +785,45 @@
             placeholder="https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/..." />
         </div>
 
+        <!-- Custom Thumbnail Image Upload & URL Box -->
+        <div class="rounded-2xl p-4 bg-violet-500/5 border border-violet-500/25 space-y-3">
+          <div class="flex items-center justify-between gap-2">
+            <label class="text-xs font-bold text-violet-300">Custom Thumbnail Image (Optional)</label>
+            <button type="button" onclick="clearVideoThumbnailInput()"
+              class="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-rose-500/20 text-[11px] font-mono text-gray-300 hover:text-rose-200 transition-colors">
+              Clear Thumbnail
+            </button>
+          </div>
+
+          <input id="vid-thumb-file-input" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp"
+            onchange="handleThumbnailFileUpload(event)"
+            class="w-full text-xs text-gray-300 file:mr-3 file:py-2 file:px-3.5 file:rounded-xl file:border-0 file:bg-violet-400 file:text-slate-950 file:font-bold hover:file:brightness-110 cursor-pointer" />
+
+          <div id="vid-thumb-progress-wrap" class="hidden space-y-1">
+            <div class="flex justify-between font-mono text-[11px] text-violet-300">
+              <span id="vid-thumb-status">Uploading thumbnail via Worker...</span>
+              <span id="vid-thumb-pct">0%</span>
+            </div>
+            <div class="w-full h-1.5 rounded-full bg-black/60 overflow-hidden">
+              <div id="vid-thumb-bar" class="h-full bg-gradient-to-r from-violet-400 to-cyan-400 transition-all duration-200" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] text-gray-400 mb-1">Thumbnail Image URL (Auto-converts supabase.co → Worker; leave blank for auto video frame)</label>
+            <input id="vid-thumb-url" type="url" oninput="updateThumbnailPreviewBox(this.value)"
+              class="w-full px-3.5 py-2 rounded-xl bg-black/60 border border-white/15 font-mono text-xs text-violet-200 focus:outline-none focus:border-violet-400"
+              placeholder="https://fragrant-sky-2a7c.aresgvan3040.workers.dev/storage/v1/object/public/portfolio-videos/thumbnails/..." />
+          </div>
+
+          <div id="vid-thumb-preview-wrap" class="hidden pt-1">
+            <div class="text-[10px] font-mono text-gray-400 mb-1">THUMBNAIL PREVIEW</div>
+            <img id="vid-thumb-preview-img" src="" alt="Thumbnail preview"
+              onerror="document.getElementById('vid-thumb-preview-wrap').classList.add('hidden')"
+              class="h-24 w-auto rounded-xl border border-white/15 object-cover bg-black" />
+          </div>
+        </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-semibold text-gray-300 mb-1">Software Used (comma-separated)</label>
@@ -926,6 +968,7 @@
       return list.map(v => {
         const copy = Object.assign({}, v);
         if (copy.videoSrc) copy.videoSrc = toWorkerUrl(copy.videoSrc);
+        copy.thumbnailUrl = copy.thumbnailUrl ? toWorkerUrl(copy.thumbnailUrl) : "";
         return copy;
       });
     }
@@ -1266,9 +1309,26 @@
     function buildVideoCardHTML(vid) {
       const vertical = isVerticalVideo(vid);
       const aspectClass = vertical ? "aspect-[9/16]" : "aspect-video";
+      const thumbUrl = toWorkerUrl(vid.thumbnailUrl || "");
+      const videoUrl = toWorkerUrl(vid.videoSrc || "");
       const softwareTags = (vid.software || []).map(sw =>
         `<span class="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 font-mono text-[10px] text-gray-300">${escapeHtml(sw)}</span>`
       ).join("");
+
+      const posterMediaHTML = thumbUrl
+        ? `
+          <canvas data-poster-id="${escapeAttr(vid.id)}" class="card-poster-canvas hidden w-full h-full block"></canvas>
+          <img src="${escapeAttr(thumbUrl)}" alt="${escapeAttr(vid.title)}" loading="lazy"
+            onerror="this.classList.add('hidden'); const c = this.parentElement.querySelector('.card-poster-canvas'); if (c) { c.classList.remove('hidden'); paintSingleCardPoster(c); }"
+            class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" />
+        `
+        : `
+          <canvas data-poster-id="${escapeAttr(vid.id)}" class="card-poster-canvas w-full h-full block"></canvas>
+          ${videoUrl ? `<video src="${escapeAttr(videoUrl)}#t=0.5" preload="metadata" muted playsinline
+            onloadeddata="this.classList.remove('opacity-0')"
+            onerror="this.remove()"
+            class="opacity-0 transition-opacity duration-300 absolute inset-0 w-full h-full object-cover pointer-events-none"></video>` : ""}
+        `;
 
       return `
         <article class="glass-panel card-lift rounded-3xl overflow-hidden flex flex-col justify-between group">
@@ -1276,7 +1336,7 @@
             <!-- Aspect-Accurate Poster Thumbnail -->
             <div onclick="openVideoPlayer('${escapeAttr(vid.id)}')"
               class="relative ${aspectClass} bg-slate-950 overflow-hidden cursor-pointer border-b border-white/10">
-              <canvas data-poster-id="${escapeAttr(vid.id)}" class="card-poster-canvas w-full h-full block"></canvas>
+              ${posterMediaHTML}
 
               <!-- Top Badges -->
               <div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between gap-1.5 z-10">
@@ -1294,16 +1354,16 @@
               </div>
 
               <!-- Center Play Button -->
-              <div class="absolute inset-0 flex items-center justify-center bg-black/15 group-hover:bg-black/5 transition-colors">
+              <div class="absolute inset-0 flex items-center justify-center bg-black/15 group-hover:bg-black/5 transition-colors z-10">
                 <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/15 group-hover:bg-cyan-400 text-white group-hover:text-slate-950 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-2xl transition-all group-hover:scale-110">
                   <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                 </div>
               </div>
 
               <!-- Bottom HD Stream Indicator -->
-              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono">
+              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-[10px] font-mono z-10">
                 <span class="text-emerald-300 bg-black/75 px-2 py-0.5 rounded border border-white/10 truncate">
-                  ● HD EDGE STREAM
+                  ${thumbUrl ? '● CUSTOM THUMBNAIL' : '● HD EDGE STREAM'}
                 </span>
               </div>
             </div>
@@ -1358,48 +1418,116 @@
       paintAllCardPosters();
     }
 
+    function paintSingleCardPoster(canvas) {
+      if (!canvas) return;
+      const vidId = canvas.getAttribute("data-poster-id");
+      const vid = appState.videos.find(v => v.id === vidId);
+      if (!vid) return;
+
+      const vertical = isVerticalVideo(vid);
+      const w = canvas.width = vertical ? 360 : 640;
+      const h = canvas.height = vertical ? 640 : 360;
+      const ctx = canvas.getContext("2d");
+
+      let c1 = "#071929", c2 = "#1c0e36", accent = "#00f0ff";
+      if (vid.presetTheme === "magenta-cyan") {
+        c1 = "#2a0924"; c2 = "#082032"; accent = "#f472b6";
+      } else if (vid.presetTheme === "amber-cyan") {
+        c1 = "#261607"; c2 = "#081f2c"; accent = "#f59e0b";
+      }
+
+      const grad = ctx.createLinearGradient(0, 0, w, h);
+      grad.addColorStop(0, c1);
+      grad.addColorStop(1, c2);
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, w, h);
+
+      // Studio viewfinder frame
+      ctx.strokeStyle = "rgba(255,255,255,0.08)";
+      ctx.lineWidth = 1;
+      ctx.strokeRect(16, 16, w - 32, h - 32);
+
+      // Orbital motion ring
+      ctx.beginPath();
+      ctx.arc(w * 0.5, h * 0.48, Math.min(w, h) * 0.27, 0, Math.PI * 2);
+      ctx.strokeStyle = accent + "44";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Subtle watermark text
+      ctx.fillStyle = "rgba(255,255,255,0.06)";
+      ctx.font = `800 ${vertical ? 52 : 64}px 'Plus Jakarta Sans', sans-serif`;
+      ctx.textAlign = "center";
+      ctx.fillText(vertical ? "9:16" : "VS", w * 0.5, h * 0.51);
+    }
+
     function paintAllCardPosters() {
       document.querySelectorAll(".card-poster-canvas").forEach(canvas => {
-        const vidId = canvas.getAttribute("data-poster-id");
-        const vid = appState.videos.find(v => v.id === vidId);
-        if (!vid) return;
-
-        const vertical = isVerticalVideo(vid);
-        const w = canvas.width = vertical ? 360 : 640;
-        const h = canvas.height = vertical ? 640 : 360;
-        const ctx = canvas.getContext("2d");
-
-        let c1 = "#071929", c2 = "#1c0e36", accent = "#00f0ff";
-        if (vid.presetTheme === "magenta-cyan") {
-          c1 = "#2a0924"; c2 = "#082032"; accent = "#f472b6";
-        } else if (vid.presetTheme === "amber-cyan") {
-          c1 = "#261607"; c2 = "#081f2c"; accent = "#f59e0b";
+        if (!canvas.classList.contains("hidden")) {
+          paintSingleCardPoster(canvas);
         }
-
-        const grad = ctx.createLinearGradient(0, 0, w, h);
-        grad.addColorStop(0, c1);
-        grad.addColorStop(1, c2);
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, w, h);
-
-        // Studio viewfinder frame
-        ctx.strokeStyle = "rgba(255,255,255,0.08)";
-        ctx.lineWidth = 1;
-        ctx.strokeRect(16, 16, w - 32, h - 32);
-
-        // Orbital motion ring
-        ctx.beginPath();
-        ctx.arc(w * 0.5, h * 0.48, Math.min(w, h) * 0.27, 0, Math.PI * 2);
-        ctx.strokeStyle = accent + "44";
-        ctx.lineWidth = 2;
-        ctx.stroke();
-
-        // Subtle watermark text
-        ctx.fillStyle = "rgba(255,255,255,0.06)";
-        ctx.font = `800 ${vertical ? 52 : 64}px 'Plus Jakarta Sans', sans-serif`;
-        ctx.textAlign = "center";
-        ctx.fillText(vertical ? "9:16" : "VS", w * 0.5, h * 0.51);
       });
+    }
+
+    function updateThumbnailPreviewBox(rawUrl) {
+      const wrap = document.getElementById("vid-thumb-preview-wrap");
+      const img = document.getElementById("vid-thumb-preview-img");
+      if (!wrap || !img) return;
+      const converted = toWorkerUrl((rawUrl || "").trim());
+      if (converted) {
+        img.src = converted;
+        wrap.classList.remove("hidden");
+      } else {
+        img.removeAttribute("src");
+        wrap.classList.add("hidden");
+      }
+    }
+
+    function clearVideoThumbnailInput() {
+      const urlInput = document.getElementById("vid-thumb-url");
+      const fileInput = document.getElementById("vid-thumb-file-input");
+      const progressWrap = document.getElementById("vid-thumb-progress-wrap");
+      if (urlInput) urlInput.value = "";
+      if (fileInput) fileInput.value = "";
+      if (progressWrap) progressWrap.classList.add("hidden");
+      updateThumbnailPreviewBox("");
+      showToast("Cleared custom thumbnail (will use auto video frame).");
+    }
+
+    async function handleThumbnailFileUpload(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+
+      const progressWrap = document.getElementById("vid-thumb-progress-wrap");
+      const statusEl = document.getElementById("vid-thumb-status");
+      const pctEl = document.getElementById("vid-thumb-pct");
+      const barEl = document.getElementById("vid-thumb-bar");
+      const saveBtn = document.getElementById("vid-save-btn");
+
+      progressWrap.classList.remove("hidden");
+      statusEl.textContent = "Uploading thumbnail via Worker...";
+      pctEl.textContent = "0%";
+      barEl.style.width = "0%";
+      saveBtn.disabled = true;
+      saveBtn.classList.add("opacity-50");
+
+      try {
+        const workerThumbUrl = await uploadFileToCloudBucket(file, "thumbnails", pct => {
+          pctEl.textContent = pct + "%";
+          barEl.style.width = pct + "%";
+        });
+
+        document.getElementById("vid-thumb-url").value = workerThumbUrl;
+        updateThumbnailPreviewBox(workerThumbUrl);
+        statusEl.textContent = "Thumbnail uploaded! Click Save & Sync.";
+        showToast("Thumbnail uploaded to cloud! Click Save & Sync.");
+      } catch (err) {
+        statusEl.textContent = "Thumbnail upload failed: " + err.message;
+        showToast("Thumbnail upload failed: " + err.message);
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.classList.remove("opacity-50");
+      }
     }
 
     function openVideoModal(defaultAspect = "16:9", videoId = null) {
@@ -1407,10 +1535,13 @@
       const heading = document.getElementById("video-modal-heading");
       document.getElementById("vid-upload-progress-wrap").classList.add("hidden");
       document.getElementById("vid-file-input").value = "";
+      document.getElementById("vid-thumb-progress-wrap").classList.add("hidden");
+      document.getElementById("vid-thumb-file-input").value = "";
 
       if (videoId) {
         const vid = appState.videos.find(v => v.id === videoId);
         if (!vid) return;
+        const thumbUrl = toWorkerUrl(vid.thumbnailUrl || "");
         heading.textContent = "Edit Video / Reel";
         document.getElementById("vid-edit-id").value = vid.id;
         document.getElementById("vid-title").value = vid.title || "";
@@ -1418,6 +1549,8 @@
         document.getElementById("vid-aspect").value = vid.aspectRatio || "16:9";
         document.getElementById("vid-duration").value = vid.duration || "00:35";
         document.getElementById("vid-url").value = toWorkerUrl(vid.videoSrc || "");
+        document.getElementById("vid-thumb-url").value = thumbUrl;
+        updateThumbnailPreviewBox(thumbUrl);
         document.getElementById("vid-software").value = (vid.software || []).join(", ");
         document.getElementById("vid-theme").value = vid.presetTheme || "cyan-violet";
         document.getElementById("vid-desc").value = vid.description || "";
@@ -1430,6 +1563,8 @@
         document.getElementById("vid-aspect").value = is9 ? "9:16" : "16:9";
         document.getElementById("vid-duration").value = is9 ? "00:30" : "00:45";
         document.getElementById("vid-url").value = "";
+        document.getElementById("vid-thumb-url").value = "";
+        updateThumbnailPreviewBox("");
         document.getElementById("vid-software").value = "After Effects";
         document.getElementById("vid-theme").value = is9 ? "amber-cyan" : "cyan-violet";
         document.getElementById("vid-desc").value = "";
@@ -1488,6 +1623,7 @@
       const aspectRatio = document.getElementById("vid-aspect").value;
       const duration = document.getElementById("vid-duration").value.trim() || "00:35";
       const videoSrc = toWorkerUrl(document.getElementById("vid-url").value.trim());
+      const thumbnailUrl = toWorkerUrl(document.getElementById("vid-thumb-url").value.trim());
       const software = document.getElementById("vid-software").value.split(",").map(s => s.trim()).filter(Boolean);
       const presetTheme = document.getElementById("vid-theme").value;
       const description = document.getElementById("vid-desc").value.trim();
@@ -1496,7 +1632,7 @@
         const idx = appState.videos.findIndex(v => v.id === editId);
         if (idx !== -1) {
           appState.videos[idx] = Object.assign({}, appState.videos[idx], {
-            title, category, aspectRatio, duration, videoSrc, software, presetTheme, description
+            title, category, aspectRatio, duration, videoSrc, thumbnailUrl, software, presetTheme, description
           });
         }
       } else {
@@ -1504,7 +1640,7 @@
           id: "vid-" + Date.now(),
           title, category, aspectRatio, duration,
           resolution: aspectRatio === "9:16" ? "1080x1920 • 9:16" : "1080p 60fps",
-          videoSrc, software, presetTheme, description
+          videoSrc, thumbnailUrl, software, presetTheme, description
         });
       }
 
@@ -1555,12 +1691,17 @@
 
       html5Video.pause();
       html5Video.removeAttribute("src");
+      html5Video.removeAttribute("poster");
       html5Video.load();
       html5Video.classList.remove("hidden");
       errorBox.classList.add("hidden");
 
       const streamUrl = toWorkerUrl(vid.videoSrc || "");
+      const thumbUrl = toWorkerUrl(vid.thumbnailUrl || "");
       document.getElementById("player-direct-link").href = streamUrl;
+      if (thumbUrl) {
+        html5Video.setAttribute("poster", thumbUrl);
+      }
       html5Video.onerror = function() {
         html5Video.classList.add("hidden");
         errorBox.classList.remove("hidden");
@@ -1576,6 +1717,7 @@
       const html5Video = document.getElementById("modal-html5-video");
       html5Video.pause();
       html5Video.removeAttribute("src");
+      html5Video.removeAttribute("poster");
       html5Video.load();
       modal.classList.add("hidden");
     }
